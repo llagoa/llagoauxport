@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lucas Lagoa | UX/UI and Front end prtfolio</title>
+  <title>Lucas Lagoa | UX/UI and Front-end Portfolio</title>
   <meta name="description" content="Front-end developer Lucas Lagoa's portfolio to share projects and skills developed.">
   <meta property="og:image" content="https://i.imgur.com/bOkpEdp.png">
 
   <link rel="shortcut icon" href="assets/favicon_io/favicon-32x32.png" type="image/x-icon">
+  <link rel="preload" href="assets/img/icons/logo.png" as="image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -23,6 +26,7 @@
 
 </head>
 <body>
+  <a href="#home" class="skip-link">Skip to main content</a>
   <header class="header">
     <nav class="header__nav">
       <ul class="menu menu--principal">
@@ -38,7 +42,7 @@
         </li>
         <li class="menu__item">
           <a class="menu__link" href="#sobre">
-            <span class="menu__text">about</span>
+            <span class="menu__text">About</span>
           </a>
         </li>
         <li class="menu__item">
@@ -50,11 +54,11 @@
     </nav>
     <div class="header__brand">
       <a href="#home">
-        <img class="brand__logo" src="assets/img/icons/logo.png" alt="Logo Lucas LAgoa" height="64px" width="64px">
+        <img class="brand__logo" src="assets/img/icons/logo.png" alt="Logo Lucas Lagoa" height="64px" width="64px">
       </a>
     </div>
     <div class="header__toggle">
-      <i id="toggleTheme" class="bi bi-sun"></i>
+      <i id="toggleTheme" class="bi bi-sun" role="button" tabindex="0" aria-label="Toggle theme"></i>
     </div>
   </header>
   <nav class="nav--mobile">
@@ -92,30 +96,28 @@
       <p>Lucas Lagoa, Campinas-SP, UX/UI Designer and front-end developer.</p> 
       <ul class="menu menu--social">
         <li>
-          <a class="menu__link" href="https://github.com/llagoa" target="_blank">
+          <a class="menu__link" href="https://github.com/llagoa" target="_blank" rel="noopener noreferrer">
             <i class="menu__icon bi bi-github"></i>
           </a>
         </li>
         <li>
-          <a class="menu__link" href="https://www.linkedin.com/in/llplagoa" target="_blank">
+          <a class="menu__link" href="https://www.linkedin.com/in/llplagoa" target="_blank" rel="noopener noreferrer">
             <i class="menu__icon bi bi-linkedin"></i>
           </a>
         </li>
         <li>
-          <a class="menu__link" href="https://www.instagram.com/llagoa/" target="_blank">
+          <a class="menu__link" href="https://www.instagram.com/llagoa/" target="_blank" rel="noopener noreferrer">
             <i class="menu__icon bi bi-instagram"></i>
           </a>
         </li>
       </ul>
-      <a href="#projetos-ux">
-        <button class="btn btn--primary">
+      <a href="#projetos-ux" class="btn btn--primary">
           <span>View my projects</span>
           <i class="bi bi-arrow-down-right"></i>
-        </button>  
-      </a>
+        </a>
     </div>
     <div class="main__content2">
-      <iframe src="https://www.youtube.com/embed/VQRyt4yv8OM?si=fscezkJogO8AJyKV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/VQRyt4yv8OM?si=fscezkJogO8AJyKV" title="YouTube video player" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
   </main>
 
@@ -147,7 +149,7 @@
     <h2>UX/UI Projects</h2>
     <div class="projects__container">
       <div class="projects__card">
-        <img class="card__cover" src="assets/img/Mockups Nubo/Redesign AP.png" alt="Onboarding Redesign">
+        <img class="card__cover" src="assets/img/Mockups Nubo/Redesign AP.png" alt="Onboarding Redesign" width="600" height="400" loading="lazy">
         <div class="card__body">
           <h3 class="card__title">Onboarding Redesign</h3>
           <p class="card__description">We streamlined admissions to make registration simple and student-focused.</p>
@@ -165,11 +167,9 @@
             </li>
           </ul>
           <div class="card__buttons">
-            <a href="https://www.figma.com/proto/yCVNyeWdX6cvO3VZbRRoHL/Portolio-dev?page-id=3%3A382&node-id=34-5827&viewport=-4471%2C324%2C0.39&t=KhEmnXVoLDDeHvWz-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=34%3A5782" target="_blank" rel="noopener noreferrer">
-            <button class="btn btn--primary">
+            <a href="https://www.figma.com/proto/yCVNyeWdX6cvO3VZbRRoHL/Portolio-dev?page-id=3%3A382&node-id=34-5827&viewport=-4471%2C324%2C0.39&t=KhEmnXVoLDDeHvWz-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=34%3A5782" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
               <span>Preview</span>
               <i class="bi bi-arrow-up-right"></i>
-            </button>
             </a>  
             <a href="admissionredesign.html" class="btn">
               <span>Check Journey</span> 
@@ -178,9 +178,9 @@
         </div>
       </div>
       <div class="projects__card card--reverse">
-        <img class="card__cover" src="assets/img/Mockups Nubo/App redesign.png" alt="APP Redesign">
+        <img class="card__cover" src="assets/img/Mockups Nubo/App redesign.png" alt="APP Redesign" width="600" height="400" loading="lazy">
         <div class="card__body">
-          <h3 class="card__title">App Redesignn</h3>
+          <h3 class="card__title">App Redesign</h3>
           <p class="card__description">Redesign of the Nubo app, including the new Home screen and live class feature</p>
           <ul class="card__list">
             <li class="card__item">The original classes screen lacked structure, making navigation between subjects difficult.</li>
@@ -196,19 +196,61 @@
             </li>
           </ul>
           <div class="card__buttons">
-            <a href="https://www.figma.com/proto/yCVNyeWdX6cvO3VZbRRoHL/Portolio-dev?page-id=59%3A6660&node-id=59-6796&viewport=212%2C82%2C0.22&t=1q5jx1Z2L1ho9Eb5-1&scaling=min-zoom&content-scaling=fixed" target="_blank" rel="noopener noreferrer">
-            <button class="btn btn--primary">
+            <a href="https://www.figma.com/proto/yCVNyeWdX6cvO3VZbRRoHL/Portolio-dev?page-id=59%3A6660&node-id=59-6796&viewport=212%2C82%2C0.22&t=1q5jx1Z2L1ho9Eb5-1&scaling=min-zoom&content-scaling=fixed" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
               <span>Preview</span>
               <i class="bi bi-arrow-up-right"></i>
-            </button>  
             </a>
-            <a href="appredesign.html">
-            <button class="btn">
+            <a href="appredesign.html" class="btn">
               <span>Check Journey</span>
-            </button>
             </a>  
           </div>
         </div>
+      </div>
+      <div class="projects__card">
+        <img class="card__cover" src="assets/Gamefication/Mainview.png" alt="Gamification Screen" width="600" height="400" loading="lazy">
+
+      <div class="card__body">
+        <h3 class="card__title">Nubo Gamification</h3>
+
+        <p class="card__description">
+          Increasing long-term student engagement through a habit-support gamification system.
+        </p>
+
+        <ul class="card__list">
+          <li class="card__item">
+            Engagement dropped sharply after students’ first week.
+          </li>
+          <li class="card__item">
+            Behavioral research revealed that lack of visible progress reduced motivation.
+          </li>
+          <li class="card__item">
+            Explored gamification as a habit-support system, not a competitive layer.
+          </li>
+        </ul>
+
+        <ul class="technologies__list">
+          <li class="technologies__item">
+            <img class="technologies__logo" src="assets/img/icons/Figma.png" alt="Logo Figma">
+          </li>
+          <li class="technologies__item">
+            <img class="technologies__logo" src="assets/img/icons/Miro.png" alt="Logo Miro">
+          </li>
+        </ul>
+
+        <div class="card__buttons">
+          <a href="https://www.figma.com/proto/ZeGi5EsvxrsYRGLbBGm15j/Gamefica%C3%A7%C3%A3o?page-id=90%3A270&node-id=198-7450&p=f&viewport=964%2C-7028%2C0.18&t=HkUE8OsLVyzevtdl-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=198%3A7450" 
+             target="_blank" 
+             rel="noopener noreferrer" class="btn btn--primary">
+              <span>Preview</span>
+              <i class="bi bi-arrow-up-right"></i>
+            </a>
+
+          <a href="gamification.html" class="btn">
+              <span>Check Journey</span>
+            </a>
+
+        </div>
+      </div>
       </div>
     </div>
   </section>
@@ -217,7 +259,7 @@
     <h2>Front-End Projects</h2>
     <div class="projects__container">
       <div class="projects__card">
-        <img class="card__cover" src="assets/img/Front end gifs/pokemon.gif" alt="Pokedex DIO API">
+        <img class="card__cover" src="assets/img/Front end gifs/pokemon.gif" alt="Pokedex DIO API" width="600" height="400" loading="lazy">
         <div class="card__body">
           <h3 class="card__title">Pokedéx</h3>
           <p class="card__description">We created a Pokedex using API to see all the pokemons</p>
@@ -238,24 +280,20 @@
             </li>
           </ul>
           <div class="card__buttons">
-            <a href="https://llagoa.github.io/Pokedex-Dio/" target="_blank" rel="noopener noreferrer">
-            <button class="btn btn--primary">
+            <a href="https://llagoa.github.io/Pokedex-Dio/" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
               <span>Preview</span>
               <i class="bi bi-arrow-up-right"></i>
-            </button> 
             </a> 
-            <a href="https://github.com/llagoa/Pokedex-Dio">
-            <button class="btn">
+            <a href="https://github.com/llagoa/Pokedex-Dio" target="_blank" rel="noopener noreferrer" class="btn">
               <span>Repository</span>
-            </button> 
             </a> 
           </div>
         </div>
       </div>
       <div class="projects__card card--reverse">
-        <img class="card__cover" src="assets/img/Front end gifs/yugioh.gif" alt="Yu-Gi-Og Gif">
+        <img class="card__cover" src="assets/img/Front end gifs/yugioh.gif" alt="Yu-Gi-Oh Jokenpô" width="600" height="400" loading="lazy">
         <div class="card__body">
-          <h3 class="card__title">Yu-Gi-Oh Joken po</h3>
+          <h3 class="card__title">Yu-Gi-Oh Jokenpô</h3>
           <p class="card__description">A mini-game made in HTML, CSS and JavaScript inspired by the classic Rock, Paper, Scissors — but with cards from the Yu-Gi-Oh!! universe.</p>
           <ul class="card__list">
             <li class="card__item">The game features a Yu-Gi-Oh! rock-paper-scissors match using three iconic cards: Dark Magician, Blue-Eyes White Dragon, and Exodia.</li>
@@ -274,16 +312,12 @@
             </li>
           </ul>
           <div class="card__buttons">
-            <a href="https://llagoa.github.io/yu-gi-oh-jokenpo/" target="_blank" rel="noopener noreferrer">
-            <button class="btn btn--primary">
+            <a href="https://llagoa.github.io/yu-gi-oh-jokenpo/" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
               <span>Preview</span>
               <i class="bi bi-arrow-up-right"></i>
-            </button>  
             </a>
-            <a href="https://github.com/llagoa/yu-gi-oh-jokenpo/tree/refs/heads/main">
-            <button class="btn">
+            <a href="https://github.com/llagoa/yu-gi-oh-jokenpo" target="_blank" rel="noopener noreferrer" class="btn">
               <span>View Repository</span>
-            </button>
             </a>  
           </div>
         </div>
@@ -291,7 +325,7 @@
 
   <section id="sobre" class="about">
     <div class="about__content1">
-      <img class="about__photo" src="assets/img/profile/Mask group.png" alt="">
+      <img class="about__photo" src="assets/img/profile/Mask group.png" alt="Lucas Lagoa">
       <div class="about__description">
         <h2>About me</h2>
         <p>I’m a UX/UI Designer and Front-End Developer passionate about creating digital experiences that are both intuitive and visually engaging. 
@@ -305,17 +339,13 @@
           <span>English: Advanced | French: Intermediate</span>
         </div>
         <div class="description__buttons">
-          <a href="https:www.linkedin.com/in/llplagoa" target="_blank">
-            <button class="btn btn--primary">
+          <a href="https://www.linkedin.com/in/llplagoa" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
               <span>Connect with me</span>
               <i class="bi bi-arrow-up-right"></i>
-            </button> 
-          </a>
-          <a href="assets/files/Lucas_Lagoa_UX.pdf" download>
-            <button class="btn">
+            </a>
+          <a href="assets/files/Lucas_Lagoa_UX.pdf" download class="btn">
               <span>Resume</span>
-            </button>
-          </a>
+            </a>
         </div>
       </div>
     </div>
@@ -344,15 +374,15 @@
         <div class="row2">
           <h3>Experiences</h3>
           <h4>UX/UI Designer</h4>
-          <span>DNubo Cursinhos. Dez 2024 - present</span>
+          <span>Nubo Cursinhos. Dez 2024 - present</span>
           <span>Designing and improving user experiences in the Nubo app, 
                 helping students navigate and complete the admission process more efficiently
           </span>
           <ul class="about__list">
-                <li class="about__item">Led the full redesign of Nubo's mobile and web platform, resulting in a 25% increase in active stage.</li>
+                <li class="about__item">Led the full redesign of Nubo's mobile and web platform, resulting in a 25% increase in active engagement.</li>
                 <li class="about__item">Designed and launched the "Nubo Sisu" landing page, attracting 3.545 visits in 3 days and increasing sign-ups by 15%.</li>
-                <li class="about__item">Collaborated with the data team to turn complex datasets into visual dashborads, improving stakeholder understanding by 20%.</li>
-                <li class="about__item">Conducted usability testing with target user,s identifying key friction points and implementing solutions that raised user retention by 30%.</li>
+                <li class="about__item">Collaborated with the data team to turn complex datasets into visual dashboards, improving stakeholder understanding by 20%.</li>
+                <li class="about__item">Conducted usability testing with target users, identifying key friction points and implementing solutions that raised user retention by 30%.</li>
                 <li class="about__item">Applied principles of accessibility and mobile-first design across all projects stages.</li>
           </ul>
         </div>
@@ -401,8 +431,7 @@
                 Digital Innovation One. Jul 2025. 3h.
               </p>
               <p>
-                Learning basic Javascript functions in practice with real exercises
-               </p>
+                Learning basic Javascript functions in practice with real exercises.
               </p>
             </div>
           </div>
@@ -416,34 +445,32 @@
     </p>
     <ul class="menu menu--social">
       <li>
-        <a class="menu__link" href="https://github.com/llagoa" target="_blank">
+        <a class="menu__link" href="https://github.com/llagoa" target="_blank" rel="noopener noreferrer">
           <i class="menu__icon bi bi-github"></i>
           <span>GitHub</span>
         </a>
       </li>
       <li>
-        <a class="menu__link" href="https:www.linkedin.com/in/llplagoa" target="_blank">
+        <a class="menu__link" href="https://www.linkedin.com/in/llplagoa" target="_blank" rel="noopener noreferrer">
           <i class="menu__icon bi bi-linkedin"></i>
           <span>LinkedIn</span>
         </a>
       </li>
       <li>
-        <a class="menu__link" href="https://www.instagram.com/llagoa/" target="_blank">
+        <a class="menu__link" href="https://www.instagram.com/llagoa/" target="_blank" rel="noopener noreferrer">
           <i class="menu__icon bi bi-instagram"></i>
           <span>Instagram</span>
         </a>
       </li>
     </ul>
-    <a href="mailto:llplagoa@gmail.com">
-      <button class="btn btn--primary">
+    <a href="mailto:llplagoa@gmail.com" class="btn btn--primary">
         <span class="email">llplagoa@gmail.com</span>
-      </button>  
-    </a>
+      </a>
   </section>
 
   <footer>
     <p>
-     © 2026. All rights reserved. Lucas Lagoa. Developed for <a href="https://github.com/llagoa">LL</a>.
+     © 2026. All rights reserved. Lucas Lagoa. Portfolio by <a href="https://github.com/llagoa">Lucas Lagoa</a>.
     </p>
   </footer>
   <script src="assets/js/scripts.js"></script>

@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lucas Lagoa | UX/UI and Front-end Portfolio</title>
-  <meta name="description" content="Front-end developer Lucas Lagoa's portfolio to share projects and skills developed.">
+  <title>Lucas Lagoa | Onboarding Redesign</title>
+  <meta name="description" content="UX/UI case study: streamlined Nubo admissions to make registration simple and student-focused.">
+  <meta property="og:image" content="https://i.imgur.com/bOkpEdp.png">
 
   <link rel="shortcut icon" href="assets/favicon_io/favicon-32x32.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -23,6 +24,7 @@
 </head>
 
 <body class="case1-page">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
 <header class="header">
     <nav class="header__nav">
@@ -39,7 +41,7 @@
         </li>
         <li class="menu__item">
           <a class="menu__link" href="index.html#sobre">
-            <span class="menu__text">about</span>
+            <span class="menu__text">About</span>
           </a>
         </li>
         <li class="menu__item">
@@ -50,12 +52,12 @@
       </ul>
     </nav>
     <div class="header__brand">
-      <a href="#home">
-        <img class="brand__logo" src="assets/img/icons/logo.png" alt="Logo Lucas LAgoa" height="64px" width="64px">
+      <a href="index.html#home">
+        <img class="brand__logo" src="assets/img/icons/logo.png" alt="Logo Lucas Lagoa" height="64px" width="64px">
       </a>
     </div>
     <div class="header__toggle">
-      <i id="toggleTheme" class="bi bi-sun"></i>
+      <i id="toggleTheme" class="bi bi-sun" role="button" tabindex="0" aria-label="Toggle theme"></i>
     </div>
   </header>
   <nav class="nav--mobile">
@@ -87,7 +89,14 @@
     </ul>
   </nav>
 
-<main>
+<main id="main-content">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span aria-hidden="true">/</span>
+    <a href="index.html#projetos-ux">Projects</a>
+    <span aria-hidden="true">/</span>
+    <span>Onboarding Redesign</span>
+  </nav>
 
   <!-- INTRO / HERO -->
   <section>
@@ -357,10 +366,13 @@
 
 </main>
 
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
 
 <footer>
   <p>
-    © 2025. All rights reserved. Lucas Lagoa. Developed for <a href="https://github.com/llagoa">LL</a>.
+    © 2026. All rights reserved. Lucas Lagoa. Portfolio by <a href="https://github.com/llagoa">Lucas Lagoa</a>.
   </p>
 </footer>
 
