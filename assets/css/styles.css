@@ -196,8 +196,22 @@ i {
 }
 
 .header__brand .brand__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 3.25rem;
   height: 3.25rem;
+  border-radius: 50%;
+  border: 1px solid var(--primary-border-color);
+  color: var(--primary-color);
+  font-family: 'League Spartan', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.brand__initials {
+  font-size: 1.2rem;
 }
 
 #toggleTheme {
@@ -205,10 +219,6 @@ i {
   color: var(--primary-color);
   cursor: pointer;
   transition: ease-in-out .4s;
-}
-
-html[data-theme='light'] .brand__logo {
-  filter: invert(1);
 }
 
 /* ===== NAVIGATION COMPONENT ===== */
