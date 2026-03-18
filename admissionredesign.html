@@ -102,10 +102,8 @@
   <section>
     <h1>Nubo Admissions Redesign</h1>
     <p>
-      A complete redesign of Nubo’s admissions process to reduce drop-offs, 
-      accelerate evaluation, and create a more human, student-centered experience. 
-      What used to be a 60+ question Google Form became a guided journey inside the app, 
-      with Cloudinha — our friendly mascot — as a companion.
+      Redesigning a high-friction admissions process into a scalable, conversion-driven onboarding experience. 
+      Reduced drop-offs from ~60% to ~12% by transforming a long static form into a guided, user-centered journey.
     </p>
 
     <div class="card card__single">
@@ -123,15 +121,13 @@
   <section>
     <h2>Context</h2>
     <p>
-      At Nubo, many students abandoned the admissions process before finishing the 
-      sign-up. The original form had more than 60 questions, and nearly 60% of applicants 
-      gave up along the way. For internal teams, analyzing these answers was equally 
-      exhausting, delaying approvals.
+      At Nubo, the admissions process was a major growth bottleneck. Around 60% of applicants dropped off before completing the sign-up, directly limiting the number of enrolled students and impacting the organization’s ability to sustain partnerships and operational investments.
     </p>
     <p>
-      With thousands of potential students dropping out at step one, it became urgent to 
-      simplify the process — both to increase enrollments and to reduce the burden on 
-      Growth and Data teams.
+      The experience relied on a 60+ question Google Form, creating high cognitive load and a discouraging first interaction. At the same time, Growth stakeholders depended heavily on this data for reporting and decision-making.
+    </p>
+    <p>
+      The challenge was to significantly reduce friction without compromising essential data collection.
     </p>
   </section>
 
@@ -164,8 +160,9 @@
     <h2>Objective</h2>
     <ul class="card__list">
       <li>Increase completion rate to at least 80%.</li>
-      <li>Reduce internal workload by moving non-essential questions post-approval.</li>
-      <li>Respect technical feasibility and deliver within two months.</li>
+      <li>Reduce friction and perceived effort in the first interaction.</li>
+      <li>Maintain critical data collection for Growth and institutional needs.</li>
+      <li>Deliver a feasible solution within a 2-month timeline.</li>
     </ul>
   </section>
 
@@ -173,16 +170,29 @@
   <section>
     <h2>Problem Analysis & Strategy</h2>
     <p>
-      We worked closely with Growth and Data to map which questions were truly 
-      eliminatory and which were only informative. This analysis guided us to split the 
-      flow into two stages: an initial 16-question approval step inside the app, and a 
-      post-approval profile with the remaining questions.
+      Based on benchmarking (Duolingo, Descomplica, Busuu), we identified that successful onboarding flows minimize upfront effort and progressively collect data.
     </p>
+    
     <p>
-      We benchmarked onboarding experiences from Duolingo, Busuu, Descomplica, 
-      Estuda.com, Gran Questões, and others. Language apps like Duolingo inspired 
-      simplicity, but we decided to follow models closer to Descomplica, since its 
-      context — preparing students for exams — matched ours more closely.
+      Working closely with Growth stakeholders, we audited all admission questions and classified them into:
+      <strong>gating (required for approval)</strong> and <strong>informational (non-blocking)</strong>.
+    </p>
+    
+    <p>
+      This process revealed internal tension, as Growth initially resisted removing questions due to their importance for reporting and external requirements.
+    </p>
+    
+    <p>
+      After multiple alignment sessions, we defined a two-step approach:
+    </p>
+    
+    <ul class="card__list">
+      <li>Step 1: 16 essential questions for approval.</li>
+      <li>Step 2: Additional questions collected post-approval.</li>
+    </ul>
+    
+    <p>
+      This allowed us to reduce friction at the most critical moment while preserving business needs.
     </p>
   </section>
 
@@ -190,16 +200,15 @@
   <section>
     <h2>Design Process</h2>
     <p>
-      The flow was organized into clear blocks: account creation, introduction to 
-      Cloudinha, personal identification, address, socioeconomic data, and a final step 
-      to join a WhatsApp group. This mirrored familiar mental models and made the 
-      journey feel lighter and structured.
+      The onboarding flow was structured into clear blocks: account creation, personal information, address, and socioeconomic data. This reduced cognitive load and improved clarity.
     </p>
+    
     <p>
-      Visually, we adopted the Nunito typeface for readability and warmth, and applied 
-      Nubo’s light blue palette — strongly tied to Cloudinha’s identity. Each section was 
-      kept concise and empathetic, so the experience felt like a guided conversation 
-      instead of an interrogation.
+      Instead of a static form, the experience was designed as a guided journey, supported by Cloudinha, helping reduce anxiety during a high-pressure moment for students.
+    </p>
+    
+    <p>
+      I defined flows, wireframes, and high-fidelity interfaces, ensuring consistency through reusable components and scalable patterns.
     </p>
 
     <div class="card__diagram">
@@ -209,6 +218,46 @@
     <div class="card__welcome">
       <img class="card__cover" src="assets/cases/case1/welcome-cloudinha.png" alt="Wireframe Cloudinha">
     </div>
+  </section>
+
+  <!-- VALIDATION & ITERATION -->
+  <section>
+    <h2>Validation & Iteration</h2>
+    <p>
+      Due to time constraints, validation relied on internal testing and qualitative feedback rather than formal usability tools.
+    </p>
+  
+    <p>
+      We conducted multiple testing sessions with developers, Growth team members, leadership, and educators to identify usability issues and friction points.
+    </p>
+  
+    <p>
+      These sessions helped refine question order, clarity, and flow structure before launch.
+    </p>
+  
+    <p>
+      After launch, small iterations were introduced to accommodate new business needs, such as additional questions for mid-year applicants.
+    </p>
+  </section>
+
+  <!-- STAKEHOLDERS & COLLABORATION -->
+  <section>
+    <h2>Stakeholders & Collaboration</h2>
+    <p>
+      I partnered closely with the CTO and Growth team, leading UX decisions and facilitating alignment across stakeholders.
+    </p>
+  
+    <p>
+      One of the main challenges was stakeholder resistance to reducing the number of questions, as Growth teams relied heavily on this data.
+    </p>
+  
+    <p>
+      Through multiple discussions, I helped define what was truly necessary for approval versus what could be collected later, balancing user experience and business needs.
+    </p>
+  
+    <p>
+      The project followed a weekly iterative cycle, similar to agile sprints, ensuring continuous delivery and alignment.
+    </p>
   </section>
 
   <!-- INTERACTIONS & ERROR STATES -->
@@ -258,10 +307,10 @@
   <section>
     <h2>Challenges & Trade-offs</h2>
     <ul class="card__list">
-      <li>A very tight deadline: kickoff in January, go-live by March 8.</li>
-      <li>No animations or gamification due to technical scope limits.</li>
-      <li>Fewer Cloudinha variations than planned, adjusted to dev feasibility.</li>
-      <li>Continuous negotiation with Growth and Data to keep the first step lean.</li>
+      <li>Tight deadline: delivery between January and March.</li>
+      <li>Stakeholder resistance to reducing data collection.</li>
+      <li>Technical limitations (no animations or gamification).</li>
+      <li>Balancing user experience with institutional requirements.</li>
     </ul>
   </section>
 
@@ -313,12 +362,13 @@
   <section>
     <h2>Results</h2>
     <ul class="card__list">
-      <li>8,015 students started the admissions process.</li>
-      <li>7,062 students completed the onboarding flow.</li>
-      <li>~88% completion rate across 8,015 applicants.</li>
-      <li>Average completion time: ~3 minutes for the initial 16-question step.</li>
-      <li>Positive feedback from students who found the process easier and more intuitive.</li>
-      <li>Growth and Data teams praised the balance between usability and data collection.</li>
+      <li>Reduced drop-off from ~60% to ~12% (~88% completion rate).</li>
+      <li>8,015 users started the onboarding process.</li>
+      <li>7,062 users completed onboarding.</li>
+      <li>~3 minutes average completion time.</li>
+      <li>Improved perceived usability and reduced user frustration.</li>
+      <li>Maintained full data collection through post-onboarding flows.</li>
+      <li>Enabled scalable growth without increasing operational complexity.</li>
     </ul>
   </section>
 
@@ -338,32 +388,15 @@
   <section>
     <h2>My Role</h2>
     <p>
-      I led the end-to-end UX for the admissions redesign. I ran competitive 
-      benchmarking (Duolingo, Busuu, Descomplica, Estuda.com, Gran Questões, etc.) and 
-      translated insights into flow hypotheses. With Growth and Data, I mapped which 
-      questions were truly gating vs. informative, enabling us to cut the initial form to 
-      16 fields without losing decision criteria.
+      I led the end-to-end product design process, from problem framing to final delivery.
     </p>
+    
     <p>
-      I also collaborated with Growth to redistribute 20 complementary questions into the 
-      student profile, designing them in four thematic blocks with autosave, progress 
-      feedback, and deadlines aligned to academic milestones. This kept the admissions 
-      lean while ensuring business-critical data was captured.
+      I was responsible for defining the onboarding strategy, aligning stakeholders, and making key decisions to balance user experience with business constraints.
     </p>
+    
     <p>
-      I defined the block-based structure (account, personal ID, address, socioeconomic, 
-      WhatsApp) aligned to familiar mental models, and designed how the Cloudinha mascot 
-      shows up as an empathetic guide to reduce anxiety and drive completion. I produced 
-      low-fi wireframes, clickable prototypes that sped up engineering alignment, and the 
-      final UI (hierarchy, Nunito type, brand light-blue, form components).
-    </p>
-    <p>
-      Under a tight deadline (go-live on March 8), I prioritized high-impact decisions and 
-      negotiated trade-offs (fewer mascot variations, no gamification) to protect quality. 
-      During build, I joined rituals with the CTO and partner teams, bringing concise UX 
-      feedback to unblock feasibility, error states, and microcopy. The outcome was a 
-      shorter, clearer, more human flow — ~3-minute average session time, very low 
-      perceived failure, and strong qualitative feedback from students and staff.
+      I designed the flows, interfaces, and overall experience, while working closely with engineering and leadership to ensure feasibility and delivery within a tight timeline.
     </p>
   </section>
 
