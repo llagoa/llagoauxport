@@ -1,400 +1,332 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lucas Lagoa | Onboarding Redesign</title>
-  <meta name="description" content="UX/UI case study: streamlined Nubo admissions to make registration simple and student-focused.">
-  <meta property="og:image" content="https://i.imgur.com/bOkpEdp.png">
-
-  <link rel="shortcut icon" href="assets/favicon_io/favicon-32x32.png" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="assets/css/styles.css">
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYG88WPY8D"></script>
-  <script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucas Lagoa | Onboarding Redesign</title>
+<meta name="description" content="UX/UI case study: streamlined Nubo admissions to make registration simple and student-focused.">
+<meta property="og:image" content="https://i.imgur.com/bOkpEdp.png">
+<link rel="shortcut icon" href="assets/img/monogram.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FYG88WPY8D">
+</script>
+<script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'G-FYG88WPY8D');
   </script>
-
 </head>
-
-<body class="case1-page">
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
-<header class="header">
-    <nav class="header__nav">
-      <ul class="menu menu--principal">
-        <li class="menu__item">
-          <a class="menu__link active" href="index.html#home">
-            <span class="menu__text">Home</span>
-          </a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="index.html#projetos-ux">
-            <span class="menu__text">Projects</span>
-          </a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="index.html#sobre">
-            <span class="menu__text">About</span>
-          </a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="index.html#contato">
-            <span class="menu__text">Contact</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <div class="header__brand">
-      <a href="index.html#home" class="brand__logo" aria-label="Lucas Lagoa home">
-        <span class="brand__initials" aria-hidden="true">LL</span>
-      </a>
-    </div>
-    <div class="header__toggle">
-      <i id="toggleTheme" class="bi bi-sun" role="button" tabindex="0" aria-label="Toggle theme"></i>
-    </div>
-  </header>
-  <nav class="nav--mobile">
-    <ul class="menu menu--mobile">
-      <li class="menu__item">
-        <a class="menu__link active" href="index.html#home">
-          <i class="menu__icon bi bi-house-door"></i>
-          <span class="menu__text">Home</span>
-        </a>
-      </li>
-      <li class="menu__item">
-        <a class="menu__link" href="index.html#projetos-ux">
-          <i class="menu__icon bi bi-window-stack"></i>
-          <span class="menu__text">Projects</span>
-        </a>
-      </li>
-      <li class="menu__item">
-        <a class="menu__link" href="index.html#sobre">
-          <i class="menu__icon bi bi-person"></i>
-          <span class="menu__text">About</span>
-        </a>
-      </li>
-      <li class="menu__item">
-        <a class="menu__link" href="index.html#contato">
-          <i class="menu__icon bi bi-envelope"></i>
-          <span class="menu__text">Contact</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-
+<body class="case-page case1-page">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header class="site-header">
+<a class="brand" href="index.html" aria-label="Lucas Lagoa home">
+<img src="assets/img/monogram.svg" alt="" width="38" height="38">
+<span>Lucas Lagoa<span class="brand-role">Product Designer</span>
+</span>
+</a>
+<nav aria-label="Main navigation">
+<a href="index.html#projetos-ux">Work</a>
+<a href="index.html#sobre">About</a>
+<a href="index.html#contato">Let’s talk <span aria-hidden="true">↗</span>
+</a>
+</nav>
+<button type="button" id="toggleTheme" aria-label="Switch to dark theme">◐</button>
+</header>
 <main id="main-content">
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="index.html">Home</a>
-    <span aria-hidden="true">/</span>
-    <a href="index.html#projetos-ux">Projects</a>
-    <span aria-hidden="true">/</span>
-    <span>Onboarding Redesign</span>
-  </nav>
-
-  <!-- INTRO / HERO -->
-  <section>
-    <h1>Nubo Admissions Redesign</h1>
-    <p>
-      Redesigning a high-friction admissions process into a scalable, conversion-driven onboarding experience. 
+<div class="case-topline">
+<a href="index.html#projetos-ux">← Selected work</a>
+<span>Nubo / Product design</span>
+</div>
+<div class="case-layout">
+<aside class="case-index">
+<nav aria-label="Case study sections">
+<p class="eyebrow">IN THIS CASE</p>
+<a href="#section-1">Impact</a>
+<a href="#section-2">Context</a>
+<a href="#section-3">My Role</a>
+<a href="#section-4">Persona</a>
+<a href="#section-5">Objective</a>
+<a href="#section-6">Problem Analysis & Strategy</a>
+<a href="#section-7">Design Process</a>
+<a href="#section-8">Validation & Iteration</a>
+<a href="#section-9">Stakeholders & Collaboration</a>
+<a href="#section-10">Interactions & Error States</a>
+<a href="#section-11">Cloudinha as a Guide</a>
+<a href="#section-12">Challenges & Trade-offs</a>
+<a href="#section-13">Post-Approval Profile Questions</a>
+<a href="#section-14">Admissions Growth Over the Years</a>
+<a href="#section-15">Results</a>
+<a href="#section-16">Learnings</a>
+</nav>
+</aside>
+<article class="case-content">
+<!-- INTRO / HERO -->
+<section>
+<p class="eyebrow">NUBO / CASE STUDY 01</p>
+<h1>Nubo Admissions Redesign</h1>
+<p>
+      Redesigning a high-friction admissions process into a scalable, conversion-driven onboarding experience.
       Reduced drop-offs from ~60% to ~12% by transforming a long static form into a guided, user-centered journey.
     </p>
-
-    <div class="card card__single">
-      <img class="card__cover" src="assets/img/Mockups Nubo/Redesign AP.png" alt="Onboarding Redesign">
-    </div>
-
-    <div class="description__buttons">
-      <a href="https://www.figma.com/proto/yCVNyeWdX6cvO3VZbRRoHL/Portolio-dev?page-id=59%3A6660&node-id=59-6796&viewport=212%2C82%2C0.22&t=1q5jx1Z2L1ho9Eb5-1&scaling=min-zoom&content-scaling=fixed" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
-          <span>Preview</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- SUMMARY -->
-  <section class="case-summary">
-    <div class="case-summary__header">
-      <span class="case-summary__eyebrow">Key Results</span>
-      <h2>Impact</h2>
-    </div>
-
-    <ul class="case-summary__list">
-      <li>
-        <span class="case-summary__value">88%</span>
-        <span class="case-summary__label">completion rate</span>
-      </li>
-      <li>
-        <span class="case-summary__value">~60% → ~12%</span>
-        <span class="case-summary__label">drop-off reduction</span>
-      </li>
-      <li>
-        <span class="case-summary__value">7,062</span>
-        <span class="case-summary__label">students completed</span>
-      </li>
-      <li>
-        <span class="case-summary__value">~3 min</span>
-        <span class="case-summary__label">average time</span>
-      </li>
-      <li>
-        <span class="case-summary__value">&gt;90%</span>
-        <span class="case-summary__label">estimated reduction in operational effort</span>
-      </li>
-      <li>
-        <span class="case-summary__value">12.5×</span>
-        <span class="case-summary__label">growth in admissions scale without proportional operational effort</span>
-      </li>
-    </ul>
-  </section>
-
-  <!-- CONTEXT -->
-  <section>
-    <h2>Context</h2>
-    <p>
+<div class="card card__single">
+<img class="card__cover" src="assets/img/Mockups Nubo/Redesign AP.png" alt="Onboarding Redesign">
+</div>
+<div class="description__buttons">
+<a href="https://www.figma.com/proto/yCVNyeWdX6cvO3VZbRRoHL/Portolio-dev?page-id=59%3A6660&node-id=59-6796&viewport=212%2C82%2C0.22&t=1q5jx1Z2L1ho9Eb5-1&scaling=min-zoom&content-scaling=fixed" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+<span>Preview</span>
+</a>
+</div>
+</section>
+<!-- SUMMARY -->
+<section class="case-summary" id="section-1">
+<div class="case-summary__header">
+<span class="case-summary__eyebrow">Key Results</span>
+<h2>Impact</h2>
+</div>
+<ul class="case-summary__list">
+<li>
+<span class="case-summary__value">88%</span>
+<span class="case-summary__label">completion rate</span>
+</li>
+<li>
+<span class="case-summary__value">~60% → ~12%</span>
+<span class="case-summary__label">drop-off reduction</span>
+</li>
+<li>
+<span class="case-summary__value">7,062</span>
+<span class="case-summary__label">students completed</span>
+</li>
+<li>
+<span class="case-summary__value">~3 min</span>
+<span class="case-summary__label">average time</span>
+</li>
+<li>
+<span class="case-summary__value">&gt;90%</span>
+<span class="case-summary__label">estimated reduction in operational effort</span>
+</li>
+<li>
+<span class="case-summary__value">12.5×</span>
+<span class="case-summary__label">growth in admissions scale without proportional operational effort</span>
+</li>
+</ul>
+</section>
+<!-- CONTEXT -->
+<section id="section-2">
+<h2>Context</h2>
+<p>
       At Nubo, the admissions process was a major growth bottleneck. Around 60% of applicants dropped off before completing the sign-up, directly limiting the number of enrolled students and impacting the organization’s ability to sustain partnerships and operational investments.
     </p>
-    <p>
+<p>
       The experience relied on a 60+ question Google Form, creating high cognitive load and a discouraging first interaction. The process also created significant operational overhead because the team had to manually organize, check, and import applicant data. At the same time, Growth stakeholders depended heavily on this data for reporting and decision-making.
     </p>
-    <p>
+<p>
       The challenge was to significantly reduce friction without compromising essential data collection.
     </p>
-  </section>
-
-  <!-- ROLE -->
-  <section>
-    <h2>My Role</h2>
-    <p>
+</section>
+<!-- ROLE -->
+<section id="section-3">
+<h2>My Role</h2>
+<p>
       I led the end-to-end product design process, from problem framing to final delivery.
     </p>
-    
-    <p>
+<p>
       I was responsible for defining the onboarding strategy, aligning stakeholders, and making key decisions to balance user experience with business constraints.
     </p>
-    
-    <p>
+<p>
       I designed the flows, interfaces, and overall experience, while working closely with engineering and leadership to ensure feasibility and delivery within a tight timeline.
     </p>
-  </section>
-
-    <!-- PERSONA -->
-    <section>
-      <h2>Persona</h2>
-      <div class="card card__single">
-        <img src="assets/cases/Persona/Persona Helena NUBO.png" alt="Persona Helena - Student and Salesperson">
-      </div>
-      <p>
-        To better understand the challenges of our users, we created <strong>Helena</strong>, 
-        a senior high school student who works part-time as a sales assistant in São Paulo. 
-        She dreams of going to college but struggles with a tight schedule and the stress of 
+</section>
+<!-- PERSONA -->
+<section id="section-4">
+<h2>Persona</h2>
+<div class="card card__single">
+<img src="assets/cases/Persona/Persona Helena NUBO.png" alt="Persona Helena - Student and Salesperson">
+</div>
+<p>
+        To better understand the challenges of our users, we created <strong>Helena</strong>,
+        a senior high school student who works part-time as a sales assistant in São Paulo.
+        She dreams of going to college but struggles with a tight schedule and the stress of
         preparing for the ENEM exam.
       </p>
-      <ul class="card__list">
-        <li><strong>Objectives:</strong> find a prep course that fits her routine, complete the admissions process, and reach her dream college.</li>
-        <li><strong>Pain Points:</strong> long and exhausting sign-up forms, balancing studies with work, and the lack of guidance during stressful moments.</li>
-      </ul>
-      <p>
-        Helena’s profile helped us frame the admissions redesign with empathy: 
-        simplifying the flow, cutting unnecessary friction, and making the experience 
+<ul class="card__list">
+<li>
+<strong>Objectives:</strong> find a prep course that fits her routine, complete the admissions process, and reach her dream college.</li>
+<li>
+<strong>Pain Points:</strong> long and exhausting sign-up forms, balancing studies with work, and the lack of guidance during stressful moments.</li>
+</ul>
+<p>
+        Helena’s profile helped us frame the admissions redesign with empathy:
+        simplifying the flow, cutting unnecessary friction, and making the experience
         feel like a guided journey rather than a bureaucratic form.
       </p>
-    </section>
-  
-
-  <!-- OBJECTIVE -->
-  <section>
-    <h2>Objective</h2>
-    <ul class="card__list">
-      <li>Increase completion rate to at least 80%.</li>
-      <li>Reduce friction and perceived effort in the first interaction.</li>
-      <li>Maintain critical data collection for Growth and institutional needs.</li>
-      <li>Deliver a feasible solution within a 2-month timeline.</li>
-    </ul>
-  </section>
-
-  <!-- STRATEGY -->
-  <section>
-    <h2>Problem Analysis & Strategy</h2>
-    <p>
+</section>
+<!-- OBJECTIVE -->
+<section id="section-5">
+<h2>Objective</h2>
+<ul class="card__list">
+<li>Increase completion rate to at least 80%.</li>
+<li>Reduce friction and perceived effort in the first interaction.</li>
+<li>Maintain critical data collection for Growth and institutional needs.</li>
+<li>Deliver a feasible solution within a 2-month timeline.</li>
+</ul>
+</section>
+<!-- STRATEGY -->
+<section id="section-6">
+<h2>Problem Analysis & Strategy</h2>
+<p>
       Based on benchmarking (Duolingo, Descomplica, Busuu), we identified that successful onboarding flows minimize upfront effort and progressively collect data.
     </p>
-    
-    <p>
+<p>
       Working closely with Growth stakeholders, we audited all admission questions and classified them into:
       <strong>gating (required for approval)</strong> and <strong>informational (non-blocking)</strong>.
     </p>
-    
-    <p>
+<p>
       This process revealed internal tension, as Growth initially resisted removing questions due to their importance for reporting and external requirements.
     </p>
-    
-    <p>
+<p>
       After multiple alignment sessions, we defined a two-step approach:
     </p>
-    
-    <ul class="card__list">
-      <li>Step 1: 16 essential questions for approval.</li>
-      <li>Step 2: Additional questions collected post-approval.</li>
-    </ul>
-    
-    <p>
+<ul class="card__list">
+<li>Step 1: 16 essential questions for approval.</li>
+<li>Step 2: Additional questions collected post-approval.</li>
+</ul>
+<p>
       This allowed us to reduce friction at the most critical moment while preserving business needs.
     </p>
-  </section>
-
-  <!-- PROCESS -->
-  <section>
-    <h2>Design Process</h2>
-    <p>
+</section>
+<!-- PROCESS -->
+<section id="section-7">
+<h2>Design Process</h2>
+<p>
       The onboarding flow was structured into clear blocks: account creation, personal information, address, and socioeconomic data. This reduced cognitive load and improved clarity.
     </p>
-    
-    <p>
+<p>
       Instead of a static form, the experience was designed as a guided journey, supported by Cloudinha, helping reduce anxiety during a high-pressure moment for students.
     </p>
-    
-    <p>
+<p>
       I defined flows, wireframes, and high-fidelity interfaces, ensuring consistency through reusable components and scalable patterns.
     </p>
-
-    <div class="card__diagram">
-      <img class="card__cover" src="assets/cases/case1/User-diagram.png" alt="Redesigned admissions flow">
-    </div>
-
-    <div class="card__welcome">
-      <img class="card__cover" src="assets/cases/case1/welcome-cloudinha.png" alt="Wireframe Cloudinha">
-    </div>
-  </section>
-
-  <!-- VALIDATION & ITERATION -->
-  <section>
-    <h2>Validation & Iteration</h2>
-    <p>
+<div class="card__diagram">
+<img class="card__cover" src="assets/cases/case1/User-diagram.png" alt="Redesigned admissions flow">
+</div>
+<div class="card__welcome">
+<img class="card__cover" src="assets/cases/case1/welcome-cloudinha.png" alt="Wireframe Cloudinha">
+</div>
+</section>
+<!-- VALIDATION & ITERATION -->
+<section id="section-8">
+<h2>Validation & Iteration</h2>
+<p>
       Due to time constraints, validation relied on internal testing and qualitative feedback rather than formal usability tools.
     </p>
-  
-    <p>
+<p>
       We conducted multiple testing sessions with developers, Growth team members, leadership, and educators to identify usability issues and friction points.
     </p>
-  
-    <p>
+<p>
       These sessions helped refine question order, clarity, and flow structure before launch.
     </p>
-  
-    <p>
+<p>
       After launch, small iterations were introduced to accommodate new business needs, such as additional questions for mid-year applicants.
     </p>
-  </section>
-
-  <!-- STAKEHOLDERS & COLLABORATION -->
-  <section>
-    <h2>Stakeholders & Collaboration</h2>
-    <p>
+</section>
+<!-- STAKEHOLDERS & COLLABORATION -->
+<section id="section-9">
+<h2>Stakeholders & Collaboration</h2>
+<p>
       I partnered closely with the CTO and Growth team, leading UX decisions and facilitating alignment across stakeholders.
     </p>
-  
-    <p>
+<p>
       One of the main challenges was stakeholder resistance to reducing the number of questions, as Growth teams relied heavily on this data.
     </p>
-  
-    <p>
+<p>
       Through multiple discussions, I helped define what was truly necessary for approval versus what could be collected later, balancing user experience and business needs.
     </p>
-  
-    <p>
+<p>
       The project followed a weekly iterative cycle, similar to agile sprints, ensuring continuous delivery and alignment.
     </p>
-  </section>
-
-  <!-- INTERACTIONS & ERROR STATES -->
-  <section>
-    <h2>Interactions & Error States</h2>
-    <p>
-      Beyond the happy path, we carefully designed error states and microinteractions. 
-      These details help students understand what went wrong, how to fix it quickly, 
+</section>
+<!-- INTERACTIONS & ERROR STATES -->
+<section id="section-10">
+<h2>Interactions & Error States</h2>
+<p>
+      Beyond the happy path, we carefully designed error states and microinteractions.
+      These details help students understand what went wrong, how to fix it quickly,
       and reduce frustration during a stressful admission moment.
     </p>
-
-    <div class="card card__nome">
-      <img src="assets/cases/case1/Telas digitadas - erradas/nome digitado.png" alt="Screen asking for the user's name">
-      <img src="assets/cases/case1/Telas digitadas - erradas/nome erro.png" alt="Screen asking for the user's name in wrong status">
-    </div>
-
-    <div class="card">
-      <img src="assets/cases/case1/Telas digitadas - erradas/ID Pessoal digitado.png" alt="Screen asking for personal information">
-      <img src="assets/cases/case1/Telas digitadas - erradas/ID Pessoal erro.png" alt="Screen asking for personal information in wrong status">
-    </div>
-
-    <div class="card card__address">
-      <img src="assets/cases/case1/Telas digitadas - erradas/Endereço digitado.png" alt="Screen asking for user's address information">
-      <img src="assets/cases/case1/Telas digitadas - erradas/Endereço erro.png" alt="Screen asking for user's address information in wrong status">
-    </div>
-  </section>
-
-  <!-- CLOUDINHA -->
-  <section>
-    <h2>Cloudinha as a Guide</h2>
-    <p>
-      Inspired by Duo from Duolingo, Cloudinha was integrated as a friendly companion 
-      throughout the journey. She introduced herself to students, encouraged them to 
+<div class="card card__nome">
+<img src="assets/cases/case1/Telas digitadas - erradas/nome digitado.png" alt="Screen asking for the user's name">
+<img src="assets/cases/case1/Telas digitadas - erradas/nome erro.png" alt="Screen asking for the user's name in wrong status">
+</div>
+<div class="card">
+<img src="assets/cases/case1/Telas digitadas - erradas/ID Pessoal digitado.png" alt="Screen asking for personal information">
+<img src="assets/cases/case1/Telas digitadas - erradas/ID Pessoal erro.png" alt="Screen asking for personal information in wrong status">
+</div>
+<div class="card card__address">
+<img src="assets/cases/case1/Telas digitadas - erradas/Endereço digitado.png" alt="Screen asking for user's address information">
+<img src="assets/cases/case1/Telas digitadas - erradas/Endereço erro.png" alt="Screen asking for user's address information in wrong status">
+</div>
+</section>
+<!-- CLOUDINHA -->
+<section id="section-11">
+<h2>Cloudinha as a Guide</h2>
+<p>
+      Inspired by Duo from Duolingo, Cloudinha was integrated as a friendly companion
+      throughout the journey. She introduced herself to students, encouraged them to
       keep going, and made the process feel less lonely during a stressful moment.
     </p>
-    <p>
-      Technical constraints limited the number of poses and placements we could 
+<p>
+      Technical constraints limited the number of poses and placements we could
       implement, but even small appearances made a significant emotional impact.
     </p>
-
-    <div class="card">
-      <img src="assets/cases/case1/Cloudinha.png" alt="Cloudinha mascot">
-    </div>
-  </section>
-
-  <!-- CHALLENGES -->
-  <section>
-    <h2>Challenges & Trade-offs</h2>
-    <ul class="card__list">
-      <li>Tight deadline: delivery between January and March.</li>
-      <li>Stakeholder resistance to reducing data collection.</li>
-      <li>Technical limitations (no animations or gamification).</li>
-      <li>Balancing user experience with institutional requirements.</li>
-    </ul>
-  </section>
-
-  <!-- POST-APPROVAL PROFILE QUESTIONS -->
-  <section>
-    <h2>Post-Approval Profile Questions</h2>
-    <p>
-      After the first step, 20 additional questions were relocated to the student’s profile. 
-      These were informative fields essential for Growth and Data, but not eliminatory. 
+<div class="card">
+<img src="assets/cases/case1/Cloudinha.png" alt="Cloudinha mascot">
+</div>
+</section>
+<!-- CHALLENGES -->
+<section id="section-12">
+<h2>Challenges & Trade-offs</h2>
+<ul class="card__list">
+<li>Tight deadline: delivery between January and March.</li>
+<li>Stakeholder resistance to reducing data collection.</li>
+<li>Technical limitations (no animations or gamification).</li>
+<li>Balancing user experience with institutional requirements.</li>
+</ul>
+</section>
+<!-- POST-APPROVAL PROFILE QUESTIONS -->
+<section id="section-13">
+<h2>Post-Approval Profile Questions</h2>
+<p>
+      After the first step, 20 additional questions were relocated to the student’s profile.
+      These were informative fields essential for Growth and Data, but not eliminatory.
       To avoid overwhelming students, we grouped them into four thematic blocks:
     </p>
-    <ul class="card__list">
-      <li><strong>Education Questions</strong> — 5 items.</li>
-      <li><strong>Questions About You</strong> — 7 items.</li>
-      <li><strong>Interaction Questions</strong> — 5 items.</li>
-      <li><strong>Retention Policies</strong> — 3 items.</li>
-    </ul>
-    <p>
-      Each block could be completed separately, with autosave and progress indicators. 
-      A visual tracker at the top showed current progress, and each finished section 
-      turned green with a checkmark. Students had until June 25 to complete all blocks, 
+<ul class="card__list">
+<li>
+<strong>Education Questions</strong> — 5 items.</li>
+<li>
+<strong>Questions About You</strong> — 7 items.</li>
+<li>
+<strong>Interaction Questions</strong> — 5 items.</li>
+<li>
+<strong>Retention Policies</strong> — 3 items.</li>
+</ul>
+<p>
+      Each block could be completed separately, with autosave and progress indicators.
+      A visual tracker at the top showed current progress, and each finished section
+      turned green with a checkmark. Students had until June 25 to complete all blocks,
       alongside the SimulaNubo and Module Nubo activities required for final enrollment.
     </p>
-
-    <div class="card card__single">
-      <img src="assets/cases/case3/Profile-screen.png" alt="Profile blocks with questions (mockup)">
-    </div>
-  </section>
-
-  <section>
-    <h2>Admissions Growth Over the Years</h2>
-  
-    <p>
+<div class="card card__single">
+<img src="assets/cases/case3/Profile-screen.png" alt="Profile blocks with questions (mockup)">
+</div>
+</section>
+<section id="section-14">
+<h2>Admissions Growth Over the Years</h2>
+<p>
         Admissions at Nubo have grown significantly over the past few years.
         The redesigned onboarding helped support this scale while maintaining
       a high completion rate and a much simpler experience for students. By
@@ -405,71 +337,66 @@
       increase in operational effort. This rounded comparison is evidence of
       scalability, not an exact measured causal impact of the redesign.
     </p>
-  
-    <ul class="card__list">
-      <li><strong>2023:</strong> 1,470 students completed the process (Google Form).</li>
-      <li><strong>2024:</strong> 1,446 students completed the process (Google Form).</li>
-      <li><strong>2025:</strong> 3,415 students completed the redesigned onboarding.</li>
-      <li><strong>2026:</strong> 7,062 students completed onboarding inside the redesigned app flow.</li>
-    </ul>
-  </section>
-
-
-  <!-- RESULTS -->
-  <section>
-    <h2>Results</h2>
-    <ul class="card__list">
-      <li>Reduced drop-off from ~60% to ~12% (~88% completion rate).</li>
-      <li>8,015 users started the onboarding process.</li>
-      <li>7,062 users completed onboarding.</li>
-      <li>~3 minutes average completion time.</li>
-      <li>Improved perceived usability and reduced user frustration.</li>
-      <li>Maintained full data collection through post-onboarding flows.</li>
-      <li>Enabled scalable growth without increasing operational complexity.</li>
-      <li>Reduced operational effort by an estimated 90%+ through onboarding automation, based on operational analysis rather than a formally measured historical metric.</li>
-      <li>Supported a 12.5× increase in admissions volume without a proportional increase in operational effort.</li>
-    </ul>
-  </section>
-
-  <!-- LEARNINGS -->
-  <section>
-    <h2>Learnings</h2>
-    <ul class="card__list">
-      <li>Simplifying often means cutting — less is truly more.</li>
-      <li>Frequent alignment with engineering prevents rework.</li>
-      <li>Even under a CTO-led bridge, clear UX feedback accelerates decisions.</li>
-      <li>Empathy matters most when students are under pressure.</li>
-      <li>Redistribution of data questions post-approval can balance user needs with business intelligence.</li>
-      <li>Designing for scale can be as important as improving the individual user experience: automation reduced operational effort while enabling significant growth in admissions volume.</li>
-    </ul>
-  </section>
-
-  <!-- CTA -->
-  <section>
-    <div class="description__buttons">
-      <a class="btn btn--primary"  href="https://www.figma.com/proto/yCVNyeWdX6cvO3VZbRRoHL/Portolio-dev?page-id=59%3A6660&node-id=59-6796&viewport=212%2C82%2C0.22&t=1q5jx1Z2L1ho9Eb5-1&scaling=min-zoom&content-scaling=fixed" target="_blank" rel="noopener noreferrer">
-          <span>Preview</span>   
-      </a>
-
-      <a href="appredesign.html"rel="noopener noreferrer"
+<ul class="card__list">
+<li>
+<strong>2023:</strong> 1,470 students completed the process (Google Form).</li>
+<li>
+<strong>2024:</strong> 1,446 students completed the process (Google Form).</li>
+<li>
+<strong>2025:</strong> 3,415 students completed the redesigned onboarding.</li>
+<li>
+<strong>2026:</strong> 7,062 students completed onboarding inside the redesigned app flow.</li>
+</ul>
+</section>
+<!-- RESULTS -->
+<section id="section-15">
+<h2>Results</h2>
+<ul class="card__list">
+<li>Reduced drop-off from ~60% to ~12% (~88% completion rate).</li>
+<li>8,015 users started the onboarding process.</li>
+<li>7,062 users completed onboarding.</li>
+<li>~3 minutes average completion time.</li>
+<li>Improved perceived usability and reduced user frustration.</li>
+<li>Maintained full data collection through post-onboarding flows.</li>
+<li>Enabled scalable growth without increasing operational complexity.</li>
+<li>Reduced operational effort by an estimated 90%+ through onboarding automation, based on operational analysis rather than a formally measured historical metric.</li>
+<li>Supported a 12.5× increase in admissions volume without a proportional increase in operational effort.</li>
+</ul>
+</section>
+<!-- LEARNINGS -->
+<section id="section-16">
+<h2>Learnings</h2>
+<ul class="card__list">
+<li>Simplifying often means cutting — less is truly more.</li>
+<li>Frequent alignment with engineering prevents rework.</li>
+<li>Even under a CTO-led bridge, clear UX feedback accelerates decisions.</li>
+<li>Empathy matters most when students are under pressure.</li>
+<li>Redistribution of data questions post-approval can balance user needs with business intelligence.</li>
+<li>Designing for scale can be as important as improving the individual user experience: automation reduced operational effort while enabling significant growth in admissions volume.</li>
+</ul>
+</section>
+<!-- CTA -->
+<section>
+<div class="description__buttons">
+<a class="btn btn--primary"  href="https://www.figma.com/proto/yCVNyeWdX6cvO3VZbRRoHL/Portolio-dev?page-id=59%3A6660&node-id=59-6796&viewport=212%2C82%2C0.22&t=1q5jx1Z2L1ho9Eb5-1&scaling=min-zoom&content-scaling=fixed" target="_blank" rel="noopener noreferrer">
+<span>Preview</span>
+</a>
+<a href="appredesign.html"rel="noopener noreferrer"
           class="btn btn--primary">
-          <span>Next</span>          
-      </a>
-    </div>
-  </section>
-
+<span>Next</span>
+</a>
+</div>
+</section>
+</article>
+</div>
 </main>
-
-  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
-    <i class="bi bi-arrow-up"></i>
-  </button>
-
-<footer>
-  <p>
-    © 2026. All rights reserved. Lucas Lagoa. Portfolio by <a href="https://github.com/llagoa">Lucas Lagoa</a>.
-  </p>
+<footer class="site-footer">
+<a href="index.html">Lucas Lagoa © 2026</a>
+<span>Designed &amp; built with care.</span>
+<a href="https://www.linkedin.com/in/llplagoa" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
 </footer>
-
-<script src="assets/js/scripts.js"></script>
+<script src="assets/js/scripts.js">
+</script>
+<button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 </body>
 </html>
