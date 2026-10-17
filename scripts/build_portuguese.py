@@ -15,6 +15,7 @@ class Translator(HTMLParser):
    if value is None:out.append(key);continue
    if key in ['alt','aria-label','title','content']:value=translations.get(value,value)
    if tag=='html' and key=='lang':value='pt-BR'
+   if key=='href' and value=='assets/files/Lucas_Lagoa_Resume_EN.pdf':value='assets/files/Lucas_Lagoa_Curriculo_PT_BR.pdf'
    # Base keeps shared assets in the repository root; local page links use PT paths.
    if key=='href' and value.split('#')[0] in PAGES:value='pt-br/'+value
    elif key=='href' and value.startswith('#'):value='pt-br/'+self.page+value
