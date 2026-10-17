@@ -48,15 +48,54 @@ if (caseImages.length && typeof HTMLDialogElement !== 'undefined') {
   const fullImage = viewer.querySelector('img');
   const stage = viewer.querySelector('.viewer-stage');
   const zoom = viewer.querySelector('.viewer-zoom');
+  fullImage.draggable = false;
+  stage.tabIndex = 0;
+  stage.setAttribute('aria-label', ui('Image area. When zoomed, drag to move or use the arrow keys.', 'Área da imagem. Quando ampliada, arraste para mover ou use as teclas de seta.'));
+  let drag = null;
+  const endDrag = () => {
+    if (drag && stage.hasPointerCapture(drag.id)) stage.releasePointerCapture(drag.id);
+    drag = null;
+    stage.classList.remove('is-dragging');
+  };
+  stage.addEventListener('pointerdown', e => {
+    if (!viewer.classList.contains('is-zoomed') || !e.isPrimary || e.button !== 0) return;
+    e.preventDefault();
+    stage.focus({ preventScroll: true });
+    drag = { id: e.pointerId, x: e.clientX, y: e.clientY, left: stage.scrollLeft, top: stage.scrollTop };
+    stage.setPointerCapture(e.pointerId);
+    stage.classList.add('is-dragging');
+  });
+  stage.addEventListener('pointermove', e => {
+    if (!drag || drag.id !== e.pointerId) return;
+    stage.scrollLeft = drag.left - (e.clientX - drag.x);
+    stage.scrollTop = drag.top - (e.clientY - drag.y);
+  });
+  stage.addEventListener('pointerup', endDrag);
+  stage.addEventListener('pointercancel', endDrag);
+  stage.addEventListener('lostpointercapture', endDrag);
+  stage.addEventListener('keydown', e => {
+    if (!viewer.classList.contains('is-zoomed')) return;
+    const delta = { ArrowLeft: [-80, 0], ArrowRight: [80, 0], ArrowUp: [0, -80], ArrowDown: [0, 80] }[e.key];
+    if (delta) { e.preventDefault(); stage.scrollBy(delta[0], delta[1]); }
+  });
   let trigger;
   let previousOverflow;
-  const resetZoom = () => { viewer.classList.remove('is-zoomed'); zoom.textContent = ui('Zoom in', 'Ampliar'); zoom.setAttribute('aria-pressed', 'false'); stage.scrollTo(0, 0); };
+  const resetZoom = () => { endDrag(); fullImage.style.width = ''; fullImage.style.height = ''; viewer.classList.remove('is-zoomed'); zoom.textContent = ui('Zoom in', 'Ampliar'); zoom.setAttribute('aria-pressed', 'false'); stage.scrollTo(0, 0); };
   viewer.querySelector('.viewer-close').addEventListener('click', () => viewer.close());
-  viewer.addEventListener('click', e => { if (e.target === viewer || e.target === stage) viewer.close(); });
+  viewer.addEventListener('click', e => { if (e.target === viewer || (e.target === stage && !viewer.classList.contains('is-zoomed'))) viewer.close(); });
   zoom.addEventListener('click', () => {
-    const expanded = viewer.classList.toggle('is-zoomed');
-    zoom.textContent = expanded ? ui('Fit to screen', 'Ajustar à tela') : ui('Zoom in', 'Ampliar');
-    zoom.setAttribute('aria-pressed', String(expanded));
+    if (viewer.classList.contains('is-zoomed')) { resetZoom(); return; }
+    if (!fullImage.naturalWidth || !fullImage.naturalHeight) return;
+    const fitScale = Math.min(stage.clientWidth / fullImage.naturalWidth, stage.clientHeight / fullImage.naturalHeight);
+    viewer.classList.add('is-zoomed');
+    fullImage.style.width = `${Math.round(fullImage.naturalWidth * fitScale * 2.5)}px`;
+    fullImage.style.height = `${Math.round(fullImage.naturalHeight * fitScale * 2.5)}px`;
+    zoom.textContent = ui('Fit to screen', 'Ajustar à tela');
+    zoom.setAttribute('aria-pressed', 'true');
+    // Scroll after the enlarged image is laid out so zoom begins at its center.
+    stage.scrollLeft = Math.max(0, (stage.scrollWidth - stage.clientWidth) / 2);
+    stage.scrollTop = Math.max(0, (stage.scrollHeight - stage.clientHeight) / 2);
+    stage.focus({ preventScroll: true });
   });
   viewer.addEventListener('close', () => {
     document.body.style.overflow = previousOverflow;
@@ -73,7 +112,7 @@ if (caseImages.length && typeof HTMLDialogElement !== 'undefined') {
       trigger = img;
       fullImage.src = img.currentSrc || img.src;
       fullImage.alt = img.alt;
-      viewer.querySelector('.viewer-caption').textContent = img.alt;
+      viewer.querySelector('.viewer-caption').textContent = img.alt + ui(' — Zoom in, then drag to explore.', ' — Amplie e arraste para explorar.');
       resetZoom();
       previousOverflow = document.body.style.overflow;
       document.body.style.overflow = 'hidden';
