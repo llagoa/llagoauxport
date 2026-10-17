@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<base href="../">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucas Lagoa | Exploração de engajamento e gamificação</title>
+<meta name="description" content="Exploração de UX sobre engajamento, retenção e gamificação na Nubo.">
+<meta property="og:image" content="https://i.imgur.com/bOkpEdp.png">
+<link rel="shortcut icon" href="assets/img/monogram.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FYG88WPY8D">
+</script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FYG88WPY8D');
+  </script>
+</head>
+<body class="case-page case3-page">
+<a href="pt-br/gamification.html#main-content" class="skip-link">Pular para o conteúdo principal</a>
+<header class="site-header">
+<a class="brand" href="pt-br/index.html" aria-label="Lucas Lagoa — início">
+<img src="assets/img/monogram.svg" alt="" width="38" height="38">
+<span>Lucas Lagoa<span class="brand-role">Product Designer</span>
+</span>
+</a>
+<nav aria-label="Navegação principal">
+<a href="pt-br/index.html#projetos-ux">Projetos</a>
+<a href="pt-br/index.html#sobre">Sobre</a>
+<a href="pt-br/index.html#contato">Vamos conversar </a>
+</nav>
+<div class="language-switch" aria-label="Idioma"><a href="gamification.html" data-language="en" lang="en">EN</a><a href="pt-br/gamification.html" data-language="pt-BR" lang="pt-BR" aria-current="page">PT-BR</a></div><button type="button" id="toggleTheme" aria-label="Ativar tema escuro">◐</button>
+</header>
+<main id="main-content">
+<div class="case-topline">
+<a href="pt-br/index.html#projetos-ux">← Projetos selecionados</a>
+<span>Nubo / Exploração</span>
+</div>
+<div class="case-layout">
+<aside class="case-index">
+<nav aria-label="Seções do case">
+<p class="eyebrow">NESTE CASE</p>
+<a href="pt-br/gamification.html#section-1">Contexto</a>
+<a href="pt-br/gamification.html#section-2">Objetivo</a>
+<a href="pt-br/gamification.html#section-3">Meu papel e escopo</a>
+<a href="pt-br/gamification.html#section-4">Pesquisa comportamental</a>
+<a href="pt-br/gamification.html#section-5">Principais insights</a>
+<a href="pt-br/gamification.html#section-6">Arquitetura do sistema antes das telas</a>
+<a href="pt-br/gamification.html#section-7">Fluxos de usuário</a>
+<a href="pt-br/gamification.html#section-8">Evolução da interface</a>
+<a href="pt-br/gamification.html#section-9">Protótipo e status</a>
+<a href="pt-br/gamification.html#section-10">Escopo visual e de animação</a>
+<a href="pt-br/gamification.html#section-11">Principais aprendizados</a>
+</nav>
+</aside>
+<article class="case-content">
+<!-- HERO -->
+<section class="case-hero">
+<p class="eyebrow">NUBO / CASE 03</p>
+<h1>Design para a constância nos estudos</h1>
+<p> Uma iniciativa de UX para entender o comportamento dos alunos e projetar um sistema escalável de engajamento que apoie a constância nos estudos a longo prazo. </p>
+<div class="card card__single">
+<img src="assets/Gamefication/Mainview.png" loading="lazy" alt="Visão geral do sistema de gamificação">
+</div>
+<div class="description__buttons">
+<a href="https://www.figma.com/proto/ZeGi5EsvxrsYRGLbBGm15j/Gamefica%C3%A7%C3%A3o?page-id=90%3A270&amp;node-id=198-7450&amp;p=f&amp;viewport=964%2C-7028%2C0.18&amp;t=HkUE8OsLVyzevtdl-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;starting-point-node-id=198%3A7450" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+<span>Ver protótipo</span>
+</a>
+</div>
+</section>
+<!-- CONTEXT -->
+<section id="section-1">
+<h2>Contexto</h2>
+<p> Os padrões de engajamento da Nubo revelaram uma tendência: os alunos demonstravam alta motivação na primeira semana, mas a constância nos estudos diminuía significativamente com o tempo. </p>
+<p> Em vez de aumentar a pressão, a pergunta de produto passou a ser: como reforçar a disciplina e o progresso visível sem aumentar a carga cognitiva ou a ansiedade? </p>
+<div class="card card__single">
+<img src="assets/Gamefication/Charts of engagement/KPI_Engagement.png" loading="lazy" alt="Indicadores de engajamento">
+</div>
+<div class="card card__single">
+<img src="assets/Gamefication/Charts of engagement/Classes_attended.png" loading="lazy" alt="Queda no engajamento dos alunos ao longo do tempo">
+</div>
+</section>
+<!-- OBJECTIVE -->
+<section id="section-2">
+<h2>Objetivo</h2>
+<ul class="card__list">
+<li>Incentivar a constância a longo prazo, além de picos breves de motivação.</li>
+<li>Tornar o progresso visível e emocionalmente gratificante.</li>
+<li>Evitar mecânicas competitivas ou punitivas.</li>
+<li>Projetar um sistema escalável de reforço comportamental.</li>
+</ul>
+</section>
+<!-- MY ROLE -->
+<section id="section-3">
+<h2>Meu papel e escopo</h2>
+<p> Conduzi a exploração de UX, incluindo a síntese da pesquisa comportamental, a arquitetura do sistema, os fluxos de usuário, a exploração das interfaces e a prototipação interativa. </p>
+<p> Meu foco permaneceu na lógica de interação, na estrutura das recompensas e na modelagem escalável do sistema. </p>
+</section>
+<!-- RESEARCH -->
+<section id="section-4">
+<h2>Pesquisa comportamental</h2>
+<p> Para entender padrões de disciplina e motivação, elaborei uma pesquisa estruturada em quatro fases de reflexão. O objetivo era descobrir insights comportamentais antes de propor uma solução. </p>
+<div class="card card__single">
+<img src="assets/Gamefication/Research/Behavioral.png" loading="lazy" alt="Estrutura da pesquisa em quatro fases">
+</div>
+<p> A pesquisa recebeu 12 respostas. Embora a amostra fosse limitada, surgiram padrões qualitativos consistentes que orientaram a exploração do sistema. </p>
+</section>
+<!-- INSIGHTS -->
+<section id="section-5">
+<h2>Principais insights</h2>
+<ul class="card__list">
+<li>O impulso inicial tem um peso emocional importante.</li>
+<li>A constância importa mais do que a intensidade.</li>
+<li>Os alunos têm dificuldade para perceber o progresso incremental.</li>
+<li>O reconhecimento reforça hábitos positivos.</li>
+<li>Sistemas punitivos aumentam a ansiedade e o desengajamento.</li>
+</ul>
+<div class="card card__single">
+<img src="assets/Gamefication/Research/Insights.png" loading="lazy" alt="Síntese de insights e depoimentos anônimos">
+</div>
+</section>
+<!-- SYSTEM LOGIC -->
+<section id="section-6">
+<h2>Arquitetura do sistema antes das telas</h2>
+<p> Antes de desenhar as interfaces, mapeei a lógica de conquista das medalhas para garantir coerência estrutural e escalabilidade. </p>
+<ul class="card__list">
+<li>
+<strong>Gatilho:</strong> Qual comportamento ativa o reconhecimento do progresso?</li>
+<li>
+<strong>Validação:</strong> Como o sistema confirma a constância?</li>
+<li>
+<strong>Feedback:</strong> Como a conquista é comunicada?</li>
+<li>
+<strong>Reforço:</strong> Como o reconhecimento sustenta o comportamento?</li>
+</ul>
+<div class="card card__single">
+<img src="assets/Gamefication/Userflows/Gameficationflow.png" loading="lazy" alt="Fluxo da lógica de conquista de medalhas">
+</div>
+</section>
+<!-- USER FLOWS -->
+<section id="section-7">
+<h2>Fluxos de usuário</h2>
+<p> Exploramos três pontos de entrada contextuais para facilitar a descoberta do sistema de medalhas sem interromper os estudos. </p>
+<div class="card">
+<img src="assets/Gamefication/Userflows/Flow_live_class.png" loading="lazy" alt="Fluxo de entrada pelas aulas ao vivo">
+<img src="assets/Gamefication/Userflows/Flow_recorded_class.png" loading="lazy" alt="Fluxo de entrada pelas aulas gravadas">
+<img src="assets/Gamefication/Userflows/Access_badges_class.png" loading="lazy" alt="Fluxo de entrada pelo Perfil">
+</div>
+<div class="card card__single">
+<img src="assets/Gamefication/Userflows/Fluxogram_complete.png" loading="lazy" alt="Fluxo unificado do sistema de medalhas">
+</div>
+</section>
+<!-- DESIGN PROCESS -->
+<section id="section-8">
+<h2>Evolução da interface</h2>
+<p> Cada fluxo de conquista de medalhas foi traduzido em explorações de interface, mantendo a consistência entre a lógica do sistema e a interação do usuário. </p>
+<h3>Fluxo 1 — Acesso pela aula ao vivo</h3>
+<div class="card card__single">
+<img src="assets/Gamefication/Prototype/Live_class_mid.png" loading="lazy" alt="Fluxo de medalhas em média fidelidade">
+</div>
+<div class="card card__single">
+<img src="assets/Gamefication/Prototype/Live_class_high.png" loading="lazy" alt="Fluxo de medalhas em alta fidelidade">
+</div>
+<h3>Fluxo 2 — Acesso pelas aulas gravadas</h3>
+<div class="card card__single">
+<img src="assets/Gamefication/Prototype/Recorded_classes_mid.png" loading="lazy" alt="Fluxo de medalhas em média fidelidade">
+</div>
+<div class="card card__single">
+<img src="assets/Gamefication/Prototype/Recorded_classes_high.png" loading="lazy" alt="Fluxo de medalhas em alta fidelidade">
+</div>
+<h3>Fluxo 3 — Acesso pela aula</h3>
+<div class="card card__single">
+<img src="assets/Gamefication/Prototype/Profile_flow_mid.png" loading="lazy" alt="Fluxo de medalhas em média fidelidade">
+</div>
+<div class="card card__single">
+<img src="assets/Gamefication/Prototype/Profile_flow_high.png" loading="lazy" alt="Fluxo de medalhas em alta fidelidade">
+</div>
+<h3>Experiência unificada</h3>
+<div class="card card__single">
+<img src="assets/Gamefication/Prototype/Complete_flow_high.png" loading="lazy" alt="Fluxo completo de medalhas em alta fidelidade">
+</div>
+</section>
+<!-- PROTOTYPE -->
+<section id="section-9">
+<h2>Protótipo e status</h2>
+<p> Um protótipo totalmente navegável foi concluído para validar a lógica de interação, a clareza do feedback e os ciclos de reforço comportamental. </p>
+<p> O projeto foi pausado após uma transição de liderança, com a saída do CTO, antes da implementação em desenvolvimento. </p>
+</section>
+<!-- VISUAL SCOPE -->
+<section id="section-10">
+<h2>Escopo visual e de animação</h2>
+<p> As ilustrações das medalhas e o motion design ficaram fora do escopo desta fase. Esses materiais estavam previstos para uma equipe especializada em design visual e animação, para manter o alinhamento com a marca e a qualidade das animações. </p>
+</section>
+<!-- LEARNINGS -->
+<section id="section-11">
+<h2>Principais aprendizados</h2>
+<ul class="card__list">
+<li>A constância supera a intensidade no engajamento a longo prazo.</li>
+<li>O progresso visível reduz a ansiedade e aumenta a retenção.</li>
+<li>A lógica do sistema deve vir antes do design visual.</li>
+<li>A modelagem comportamental fortalece as decisões de produto.</li>
+</ul>
+</section>
+<!-- CTA -->
+<section>
+<div class="description__buttons">
+<a href="pt-br/appredesign.html" rel="noopener noreferrer" class="btn btn--primary">
+<span>Anterior</span>
+</a>
+<a href="https://www.figma.com/proto/ZeGi5EsvxrsYRGLbBGm15j/Gamefica%C3%A7%C3%A3o?page-id=90%3A270&amp;node-id=198-7450&amp;p=f&amp;viewport=964%2C-7028%2C0.18&amp;t=HkUE8OsLVyzevtdl-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;starting-point-node-id=198%3A7450" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+<span>Ver protótipo</span>
+</a>
+<a href="pt-br/index.html" rel="noopener noreferrer" class="btn btn--primary">
+<span>Início</span>
+</a>
+</div>
+</section>
+</article>
+</div>
+</main>
+<footer class="site-footer">
+<a href="pt-br/index.html">Lucas Lagoa © 2026</a>
+<span>Design e desenvolvimento feitos com cuidado.</span>
+<a href="https://www.linkedin.com/in/llplagoa" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</footer>
+<script src="assets/js/scripts.js">
+</script>
+<button type="button" class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</button>
+</body>
+</html>

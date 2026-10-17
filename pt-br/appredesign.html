@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<base href="../">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucas Lagoa | Redesign do aplicativo</title>
+<meta name="description" content="Redesign da Nubo: três entregas incrementais em três meses para melhorar o acesso às aulas ao vivo, ao perfil e às aulas gravadas.">
+<meta property="og:image" content="https://i.imgur.com/bOkpEdp.png">
+<link rel="shortcut icon" href="assets/img/monogram.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FYG88WPY8D">
+</script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FYG88WPY8D');
+  </script>
+</head>
+<body class="case-page case2-page">
+<a href="pt-br/appredesign.html#main-content" class="skip-link">Pular para o conteúdo principal</a>
+<header class="site-header">
+<a class="brand" href="pt-br/index.html" aria-label="Lucas Lagoa — início">
+<img src="assets/img/monogram.svg" alt="" width="38" height="38">
+<span>Lucas Lagoa<span class="brand-role">Product Designer</span>
+</span>
+</a>
+<nav aria-label="Navegação principal">
+<a href="pt-br/index.html#projetos-ux">Projetos</a>
+<a href="pt-br/index.html#sobre">Sobre</a>
+<a href="pt-br/index.html#contato">Vamos conversar </a>
+</nav>
+<div class="language-switch" aria-label="Idioma"><a href="appredesign.html" data-language="en" lang="en">EN</a><a href="pt-br/appredesign.html" data-language="pt-BR" lang="pt-BR" aria-current="page">PT-BR</a></div><button type="button" id="toggleTheme" aria-label="Ativar tema escuro">◐</button>
+</header>
+<main id="main-content">
+<div class="case-topline">
+<a href="pt-br/index.html#projetos-ux">← Projetos selecionados</a>
+<span>Nubo / Design de produto</span>
+</div>
+<div class="case-layout">
+<aside class="case-index">
+<nav aria-label="Seções do case">
+<p class="eyebrow">NESTE CASE</p>
+<a href="pt-br/appredesign.html#section-1">Contexto e problema</a>
+<a href="pt-br/appredesign.html#section-2">Meu papel e entregas</a>
+<a href="pt-br/appredesign.html#section-3">Projetando para Helena</a>
+<a href="pt-br/appredesign.html#section-4">Prioridades e escolhas</a>
+<a href="pt-br/appredesign.html#section-5">Mapeando a experiência</a>
+<a href="pt-br/appredesign.html#section-6">Explorações e wireframes</a>
+<a href="pt-br/appredesign.html#release-home">01 — Home e aulas ao vivo</a>
+<a href="pt-br/appredesign.html#release-profile">02 — Complete seu perfil</a>
+<a href="pt-br/appredesign.html#release-recorded">03 — Aulas gravadas</a>
+<a href="pt-br/appredesign.html#handoff">Handoff e colaboração</a>
+<a href="pt-br/appredesign.html#section-10">Resultados e evidências</a>
+<a href="pt-br/appredesign.html#section-11">O que aprendi</a>
+</nav>
+</aside>
+<article class="case-content">
+<!-- INTRO / HERO -->
+<section class="case-hero" aria-labelledby="case-title">
+<p class="eyebrow">NUBO / CASE 02</p>
+<h1 id="case-title">Redesign do aplicativo Nubo</h1>
+<p> Três entregas incrementais ao longo de três meses para ajudar os alunos a encontrar aulas ao vivo, completar o perfil e acompanhar as aulas gravadas. </p>
+<div class="card card__single case2-hero-image">
+<img class="card__cover" src="assets/img/Mockups Nubo/App redesign.png" alt="Visão geral do aplicativo Nubo redesenhado">
+</div>
+<dl class="case2-summary">
+<div>
+<dt>Meu papel</dt>
+<dd>Único designer UX/UI</dd>
+</div>
+<div>
+<dt>Duração</dt>
+<dd>Três meses, com entregas incrementais</dd>
+</div>
+<div>
+<dt>Equipe</dt>
+<dd>CTO, dois desenvolvedores e Growth, com contribuições da equipe pedagógica</dd>
+</div>
+</dl>
+<div class="description__buttons">
+<a href="https://www.figma.com/proto/yCVNyeWdX6cvO3VZbRRoHL/Portolio-dev?page-id=59%3A6660&amp;node-id=59-6796&amp;viewport=212%2C82%2C0.22&amp;t=1q5jx1Z2L1ho9Eb5-1&amp;scaling=min-zoom&amp;content-scaling=fixed" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+<span>Ver protótipo</span>
+</a>
+</div>
+</section>
+<!-- CONTEXT & PROBLEM -->
+<section aria-labelledby="context-title" id="section-1">
+<h2 id="context-title">Contexto e problema</h2>
+<p> A Nubo é uma iniciativa gratuita de educação online que ajuda alunos a se preparar para o ENEM. Conciliando escola, trabalho e estudos, eles precisavam de um caminho claro para entrar em uma aula ao vivo ou estudar depois. </p>
+<p> A experiência existente dificultava essas tarefas: o conteúdo ao vivo era difícil de localizar, os redirecionamentos para plataformas externas eram abruptos e as aulas gravadas precisavam de uma organização mais clara. Os alunos também precisavam de orientação para preencher as informações exigidas após a aprovação. </p>
+<p> Relatos internos de Growth e Dados indicavam aproximadamente 90% de abandono em 2024, com cerca de 16 alunos ainda ativos no fim do ano. Isso contextualizava o desafio mais amplo de engajamento; não estabelecia a dificuldade de uso da interface como sua única causa. </p>
+</section>
+<!-- ROLE & DELIVERY -->
+<section aria-labelledby="role-title" id="section-2">
+<h2 id="role-title">Meu papel e entregas</h2>
+<p> Como único designer, fui responsável pelo trabalho de UX/UI, do mapeamento dos fluxos e exploração de wireframes às interfaces finais. Participei de reuniões semanais com o CTO e dois desenvolvedores, alinhei requisitos com Growth e incorporei contribuições do pedagógico quando necessário. </p>
+<p> O trabalho avançou em pequenas entregas ao longo de três meses, nesta ordem: </p>
+<ol class="case2-releases">
+<li>
+<a href="pt-br/appredesign.html#release-home">
+<strong>Home e aulas ao vivo:</strong> facilitar a localização e o acesso à próxima aula.</a>
+</li>
+<li>
+<a href="pt-br/appredesign.html#release-profile">
+<strong>Complete seu perfil:</strong> explicar o que ainda precisava ser preenchido e mostrar o progresso.</a>
+</li>
+<li>
+<a href="pt-br/appredesign.html#release-recorded">
+<strong>Aulas gravadas:</strong> organizar o acesso para quem estuda fora do horário das transmissões.</a>
+</li>
+</ol>
+</section>
+<!-- PERSONA -->
+<section aria-labelledby="persona-title" id="section-3">
+<h2 id="persona-title">Projetando para Helena</h2>
+<div class="card card__single">
+<img src="assets/cases/Persona/Persona Helena NUBO.png" alt="Helena, persona utilizada para orientar o redesign da Nubo">
+</div>
+<p> Helena, nossa persona, concilia o último ano do ensino médio com um emprego de meio período e a preparação para o ENEM. Seu tempo limitado ajudou a orientar o design para o acesso direto, instruções claras e flexibilidade nos estudos. </p>
+<ul class="card__list">
+<li>
+<strong>Entrar rapidamente:</strong> identificar uma aula ao vivo sem procurar em várias telas.</li>
+<li>
+<strong>Entender o próximo passo:</strong> ver quais informações do perfil ainda estão pendentes.</li>
+<li>
+<strong>Estudar no seu horário:</strong> encontrar as gravações quando não puder acompanhar ao vivo.</li>
+</ul>
+</section>
+<!-- STRATEGY -->
+<section aria-labelledby="strategy-title" id="section-4">
+<h2 id="strategy-title">Prioridades e escolhas</h2>
+<p> Priorizei os caminhos mais importantes para os alunos: entrar em uma aula ao vivo, completar o perfil e encontrar uma gravação. Para as aulas ao vivo, a meta de design era permitir o acesso em até três toques, com base em desk research de aplicativos de aprendizagem semelhantes. </p>
+<p> Exploramos uma Agenda para aulas, simulados e prazos de redação, mas adiamos a funcionalidade. A integração com o calendário do celular, os cancelamentos frequentes e as limitações de tempo e orçamento tornavam a entrega mais complexa. Uma lista das próximas transmissões na Home atendia à necessidade imediata com um escopo menor. </p>
+<figure class="card card__single case2-phone">
+<img src="assets/cases/case2/Home-screen.png" alt="Home priorizando a aula ao vivo acima das próximas transmissões">
+<figcaption>A hierarquia da Home prioriza a aula ao vivo, seguida das próximas transmissões.</figcaption>
+</figure>
+</section>
+<!-- FLOWS -->
+<section aria-labelledby="flow-title" id="section-5">
+<h2 id="flow-title">Mapeando a experiência</h2>
+<p> Mapeei os caminhos entre Home, aulas e Perfil para tornar as decisões de navegação visíveis nas conversas com engenharia. Isso ajudou a conectar as entregas em uma experiência única. </p>
+<div class="card card__single">
+<img src="assets/Fluxogram/floxogram.png" alt="Fluxo conectando Home, aulas e Perfil da Nubo">
+</div>
+</section>
+<!-- WIREFRAMES -->
+<section aria-labelledby="wireframes-title" id="section-6">
+<h2 id="wireframes-title">Explorações e wireframes</h2>
+<p> As explorações em média fidelidade ajudaram a discutir a hierarquia do conteúdo e o escopo de implementação antes da UI final. Esses materiais incluem ideias adiadas, como a Agenda, além dos caminhos desenvolvidos para as entregas. </p>
+<div class="wireframes-case2">
+<figure class="card__single">
+<img src="assets/cases/case2/mid-fidelity/class-flow.jpg" alt="Exploração em média fidelidade de categorias, aulas e detalhes do conteúdo">
+<figcaption>
+<strong>Aulas:</strong> explorando o caminho da categoria até a aula e seu conteúdo.</figcaption>
+</figure>
+<figure class="card__single">
+<img src="assets/cases/case2/mid-fidelity/Home screen+agenda.png" alt="Exploração da Home e Agenda em média fidelidade, incluindo o calendário adiado">
+<figcaption>
+<strong>Home e Agenda:</strong> explorando o planejamento diário e visualizações de calendário. A funcionalidade mais ampla de Agenda foi adiada.</figcaption>
+</figure>
+</div>
+</section>
+<!-- RELEASE 1 -->
+<section id="release-home" aria-labelledby="home-title">
+<h2 id="home-title">01 — Home e aulas ao vivo</h2>
+<p> A primeira entrega tornou o acesso à aula ao vivo a ação principal da Home. O design trouxe a aula atual para o campo de visão e deixou explícita a transição para uma plataforma externa. </p>
+<ul class="card__list">
+<li>
+<strong>Aula ao vivo em primeiro lugar:</strong> um card em destaque reúne as informações da aula e uma ação clara de “Entrar na aula”.</li>
+<li>
+<strong>Próximas transmissões:</strong> uma lista ajuda os alunos a ver o que vem a seguir naquele dia.</li>
+<li>
+<strong>Redirecionamentos previsíveis:</strong> uma confirmação explica quando o aluno está prestes a sair da Nubo para a plataforma externa da aula.</li>
+</ul>
+<figure class="card card__single case2-phone">
+<img src="assets/cases/case2/Home - Aula ao vivo.png" alt="Home redesenhada com aula de Biologia ao vivo e próximas transmissões">
+<figcaption>Uma ação principal ajuda os alunos a focar na aula que está acontecendo agora.</figcaption>
+</figure>
+<figure class="card card__single case2-redirect">
+<img src="assets/cases/case2/Pop-up-class.png" alt="Confirmação de redirecionamento ao Google Meet, com opções de voltar e continuar">
+<figcaption>A confirmação de redirecionamento explica o destino antes de o aluno sair do aplicativo.</figcaption>
+</figure>
+</section>
+<!-- RELEASE 2 -->
+<section id="release-profile" aria-labelledby="profile-title">
+<h2 id="profile-title">02 — Complete seu perfil</h2>
+<p> Após a aprovação, os alunos ainda precisavam fornecer informações complementares. A segunda entrega tornou essas exigências visíveis no Perfil, explicou sua importância e organizou as perguntas em grupos menores. </p>
+<div class="card case2-screen-grid">
+<img src="assets/cases/Classess-profile/Complete-profile.png" alt="Visão do perfil com indicadores de progresso e ação para completar o perfil">
+<img src="assets/cases/Classess-profile/why-complete.png" alt="Explicação dos requisitos para manter o acesso completo às atividades da Nubo">
+<img src="assets/cases/Classess-profile/Question-to-complete.png" alt="Quatro grupos de perguntas: Educação, Sobre Você, Interação e Políticas de Retenção">
+<img src="assets/cases/Classess-profile/Questions-completed.png" alt="Grupos concluídos em verde com marcas de confirmação">
+</div>
+<ul class="card__list">
+<li>
+<strong>Quatro grupos de perguntas:</strong> Educação, Sobre Você, Interação e Políticas de Retenção organizam as 20 perguntas após a aprovação.</li>
+<li>
+<strong>Progresso visível:</strong> indicadores mostram o que está pendente, enquanto estados verdes e marcas de confirmação identificam os grupos concluídos.</li>
+<li>
+<strong>Expectativas claras:</strong> uma explicação conecta o preenchimento do perfil aos requisitos de acesso completo às atividades da Nubo.</li>
+</ul>
+<h3>Dados e foto do perfil</h3>
+<p> As telas de Perfil também mostram o nome, o número de matrícula e a situação do aluno. O fluxo de edição de foto oferece câmera, galeria ou avatar da mascote. Essas telas apoiam a identificação pessoal, em paralelo ao fluxo separado de preenchimento das perguntas. </p>
+<div class="card case2-screen-grid">
+<img src="assets/cases/case2/Profile-screen.png" alt="Perfil com avatar da mascote, nome, matrícula e situação do aluno">
+<img src="assets/cases/case2/profile-changing-photo.png" alt="Opções de seleção da foto de perfil">
+<img src="assets/cases/case2/profile-new-photo.png" alt="Perfil após a atualização da foto do aluno">
+</div>
+</section>
+<!-- RELEASE 3 -->
+<section id="release-recorded" aria-labelledby="recorded-title">
+<h2 id="recorded-title">03 — Aulas gravadas</h2>
+<p> A terceira entrega focou nos alunos que precisavam estudar fora do horário das aulas ao vivo. Organizei a jornada das categorias de matérias até o conteúdo e o player, dando a cada tela um próximo passo claro. </p>
+<div class="card case2-screen-grid">
+<img src="assets/cases/Classess-profile/Class.png" alt="Visão das aulas com categorias de matérias e opção de aulas gravadas">
+<img src="assets/cases/Classess-profile/Science.png" alt="Categoria de Ciências da Natureza com matérias disponíveis">
+<img src="assets/cases/Classess-profile/Content.png" alt="Lista de conteúdos de uma matéria">
+<img src="assets/cases/Classess-profile/Class-player.png" alt="Player de aula gravada e conteúdo de apoio">
+</div>
+<ul class="card__list">
+<li>
+<strong>Categorias reconhecíveis:</strong> nomes de matérias, ilustrações e cores ajudam a diferenciar as áreas de estudo.</li>
+<li>
+<strong>Apresentação progressiva:</strong> os alunos escolhem uma categoria, exploram suas aulas e então abrem o conteúdo.</li>
+<li>
+<strong>Acesso flexível:</strong> as gravações oferecem um caminho de volta aos estudos quando o aluno perde a transmissão ao vivo.</li>
+</ul>
+</section>
+<!-- RESULTS -->
+<section id="handoff">
+<h2>Handoff e colaboração</h2>
+<p>Documentei os fluxos de navegação, regras de interação e estados das interfaces para apoiar a implementação. As reuniões semanais com o CTO e dois desenvolvedores mantiveram as decisões de design e as entregas alinhadas.</p>
+<figure>
+<div class="card card__single"><img src="assets/cases/case2/handoff.png" alt="Mapa de handoff da Nubo com navegação, regras de interação e estados das telas" loading="lazy"></div>
+<figcaption>Documentação de handoff compartilhada com engenharia. As anotações originais estão em português. Selecione a imagem para ampliá-la ou abra o documento no Figma para examinar os detalhes.</figcaption>
+</figure>
+<a class="text-link" href="https://www.figma.com/design/HXSN3RYkl46WHNWF6nUVzd/AB-Inbev?node-id=26-11192" target="_blank" rel="noopener noreferrer">Ver handoff no Figma</a>
+</section>
+<section aria-labelledby="results-title" id="section-10">
+<h2 id="results-title">Resultados e evidências</h2>
+<ul class="card__list">
+<li>
+<strong>60% de conclusão do perfil:</strong> proporção reportada de alunos que completaram o perfil. O período de medição não foi documentado nas informações disponíveis para este case.</li>
+<li>
+<strong>Redução de aproximadamente 45% no declínio do engajamento:</strong> resultado reportado por Growth e pelo CTO para 2025 em comparação com 2024.</li>
+<li>
+<strong>Sem relatos de confusão recebidos no lançamento:</strong> um sinal qualitativo do feedback disponível para a equipe, não uma taxa medida de sucesso nas tarefas.</li>
+<li>
+<strong>Feedback positivo dos alunos:</strong> as mensagens elogiaram a organização do app e a possibilidade de acompanhar as aulas fora do horário regular.</li>
+</ul>
+<p class="case2-evidence-note"> Os resultados quantitativos foram compartilhados em relatos internos e conversas com o CTO. A comparação de engajamento descreve um resultado mais amplo do produto; ela não isola o efeito do redesign de outras mudanças. A conclusão do perfil é apresentada como taxa de conclusão, e não como aumento em relação a uma base anterior. </p>
+<div class="card card__single case2-testimonials">
+<img src="assets/cases/case2/testimonials.png" alt="Depoimentos elogiando o visual, a organização e o acesso fora do horário regular, com traduções em inglês">
+</div>
+</section>
+<!-- REFLECTION -->
+<section aria-labelledby="learnings-title" id="section-11">
+<h2 id="learnings-title">O que aprendi</h2>
+<ul class="card__list">
+<li>
+<strong>Organizar as entregas em torno das tarefas dos alunos.</strong> Entregas menores permitiram tratar o acesso ao vivo, as exigências do perfil e o estudo por gravações como problemas distintos dentro de um mesmo produto.</li>
+<li>
+<strong>Considerar o custo contínuo de uma funcionalidade.</strong> A decisão sobre a Agenda envolveu a integração com calendários e as mudanças de horários, além da interface inicial.</li>
+<li>
+<strong>Tornar os requisitos compreensíveis.</strong> Agrupar perguntas do perfil e mostrar os estados concluídos oferece aos alunos um caminho mais claro pelas exigências institucionais.</li>
+</ul>
+<h3>O que eu melhoraria a seguir</h3>
+<p> Eu definiria os períodos de medição e o rastreamento de eventos antes do lançamento e testaria as principais tarefas com alunos: entrar em uma aula ao vivo, concluir um grupo de perguntas e encontrar uma gravação. Isso ajudaria a distinguir melhorias de navegação de mudanças mais amplas no engajamento e orientar a próxima iteração com evidências mais sólidas. </p>
+</section>
+<!-- CTA -->
+<section>
+<div class="description__buttons">
+<a href="pt-br/admissionredesign.html" rel="noopener noreferrer" class="btn btn--primary">
+<span>Anterior</span>
+</a>
+<a href="https://www.figma.com/proto/yCVNyeWdX6cvO3VZbRRoHL/Portolio-dev?page-id=59%3A6660&amp;node-id=59-6796&amp;viewport=212%2C82%2C0.22&amp;t=1q5jx1Z2L1ho9Eb5-1&amp;scaling=min-zoom&amp;content-scaling=fixed" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+<span>Ver protótipo</span>
+</a>
+<a href="pt-br/gamification.html" rel="noopener noreferrer" class="btn btn--primary">
+<span>Próximo</span>
+</a>
+</div>
+</section>
+</article>
+</div>
+</main>
+<footer class="site-footer">
+<a href="pt-br/index.html">Lucas Lagoa © 2026</a>
+<span>Design e desenvolvimento feitos com cuidado.</span>
+<a href="https://www.linkedin.com/in/llplagoa" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</footer>
+<script src="assets/js/scripts.js">
+</script>
+<button type="button" class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</button>
+</body>
+</html>
