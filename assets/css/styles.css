@@ -1069,3 +1069,11 @@ section {
     gap: 1rem;
   }
 }
+
+/* Keep the opening app mockup prominent at every viewport size. */
+.case2-page .case2-hero-image > img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  flex: none;
+}
