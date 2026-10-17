@@ -629,8 +629,10 @@ main {
 .viewer-toolbar button { background: var(--surface); color: var(--ink); padding: 8px 16px; border: 1px solid var(--line); border-radius: 5px; cursor: pointer; }
 .viewer-stage { overflow: auto; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 6px; }
 .viewer-stage img { width: 100%; height: 100%; object-fit: contain; }
-.image-viewer.is-zoomed .viewer-stage { display: block; }
-.image-viewer.is-zoomed .viewer-stage img { width: auto; min-width: 100%; max-width: none; height: auto; }
+.image-viewer.is-zoomed .viewer-stage { display: block; cursor: grab; touch-action: none; overscroll-behavior: contain; }
+.image-viewer.is-zoomed .viewer-stage img { max-width: none; margin: auto; user-select: none; -webkit-user-select: none; }
+.image-viewer.is-zoomed .viewer-stage.is-dragging { cursor: grabbing; }
+.viewer-stage:focus-visible { outline: 3px solid var(--accent); outline-offset: -3px; }
 .viewer-caption { font-size: 12px; text-align: center; }
 @media (max-width: 650px) { .site-header nav a:last-child { font-size: 12px; } .site-header { gap: 10px; } .site-header nav { gap: 12px; } .image-viewer { padding: 10px; } }
 @media (max-width: 380px) { .brand>span { display: none; } }
