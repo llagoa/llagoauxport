@@ -956,3 +956,116 @@ section {
 .case2-page h2, .case2-page h1 {
   margin-bottom: 1.5rem;
 }
+
+/* Case 2 reading rhythm and image layout; uses the existing theme and fonts. */
+.case2-page main p,
+.case2-page main li,
+.case2-page main dd,
+.case2-page main figcaption {
+  line-height: 1.65;
+  text-align: left;
+}
+
+.case2-page main p + p,
+.case2-page main p + ul,
+.case2-page main p + ol {
+  margin-top: 1rem;
+}
+
+.case2-page main li + li {
+  margin-top: .65rem;
+}
+
+.case2-page main h3 {
+  padding: 1.5rem 0 1rem;
+}
+
+.case2-page main h2 {
+  overflow-wrap: anywhere;
+}
+
+.case2-page main section[id] {
+  scroll-margin-top: 7rem;
+}
+
+.case2-page .case2-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid var(--secondary-border-color);
+  border-radius: .5rem;
+}
+
+.case2-page .case2-summary dt {
+  color: var(--title-color);
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+
+.case2-page .case2-releases {
+  padding-left: 1.5rem;
+}
+
+.case2-page .case2-releases li {
+  list-style: decimal;
+}
+
+.case2-page .case2-releases a {
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+.case2-page .card,
+.case2-page .card__single {
+  padding: 1.5rem 0;
+}
+
+.case2-page .case2-screen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.case2-page .case2-screen-grid > img {
+  width: 100%;
+  max-width: 280px;
+  justify-self: center;
+}
+
+.case2-page .case2-phone > img {
+  width: 100%;
+  max-width: 340px;
+}
+
+.case2-page .case2-redirect > img {
+  width: 100%;
+  max-width: 640px;
+}
+
+.case2-page .case2-testimonials > img {
+  width: 100%;
+  max-width: 680px;
+}
+
+.case2-page figure {
+  gap: 1rem;
+}
+
+.case2-page .case2-evidence-note {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  border-left: 2px solid var(--secondary-border-color);
+}
+
+@media (max-width: 767px) {
+  .case2-page .case2-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .case2-page .description__buttons {
+    gap: 1rem;
+  }
+}

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lucas Lagoa | App Redesign</title>
-  <meta name="description" content="UX/UI case study: redesign of the Nubo app with new Home screen and live class feature.">
+  <meta name="description" content="Nubo app redesign: three incremental releases over three months, improving live class access, profile completion, and recorded lessons.">
   <meta property="og:image" content="https://i.imgur.com/bOkpEdp.png">
 
   <link rel="shortcut icon" href="assets/favicon_io/favicon-32x32.png" type="image/x-icon">
@@ -99,233 +99,213 @@
   </nav>
 
   <!-- INTRO / HERO -->
-  <section>
-    <h1>Redesigning the Nubo App</h1>
+  <section aria-labelledby="case-title">
+    <h1 id="case-title">Redesigning the Nubo App</h1>
     <p>
-      A complete redesign of two key flows — Home and Profile — to reduce friction and help students preparing for Brazil’s entrance exams join classes faster.
+      Helping students find live classes, complete their profiles, and catch up on recorded lessons through three incremental releases over three months.
     </p>
-
+    <dl class="case2-summary">
+      <div><dt>My role</dt><dd>Sole UX/UI designer</dd></div>
+      <div><dt>Timeline</dt><dd>Three months, delivered incrementally</dd></div>
+      <div><dt>Team</dt><dd>CTO, two developers, and Growth, with input from the education team</dd></div>
+    </dl>
     <div class="card card__single">
-      <img class="card__cover" src="assets/img/Mockups Nubo/App redesign.png" alt="Nubo home screen redesign">
+      <img class="card__cover" src="assets/img/Mockups Nubo/App redesign.png" alt="Overview of the redesigned Nubo app">
     </div>
-
     <div class="description__buttons">
-      <a href="https://www.figma.com/proto/yCVNyeWdX6cvO3VZbRRoHL/Portolio-dev?page-id=59%3A6660&node-id=59-6796&viewport=212%2C82%2C0.22&t=1q5jx1Z2L1ho9Eb5-1&scaling=min-zoom&content-scaling=fixed" 
+      <a href="https://www.figma.com/proto/yCVNyeWdX6cvO3VZbRRoHL/Portolio-dev?page-id=59%3A6660&amp;node-id=59-6796&amp;viewport=212%2C82%2C0.22&amp;t=1q5jx1Z2L1ho9Eb5-1&amp;scaling=min-zoom&amp;content-scaling=fixed"
          target="_blank" rel="noopener noreferrer" class="btn btn--primary">
-        <span>Preview</span>
+        <span>View prototype</span>
       </a>
     </div>
   </section>
 
-  <!-- CONTEXT -->
-  <section>
-    <h2>Context</h2>
+  <!-- CONTEXT & PROBLEM -->
+  <section aria-labelledby="context-title">
+    <h2 id="context-title">Context &amp; Problem</h2>
     <p>
-      Nubo is an app for high-school students preparing for ENEM and other entrance exams. The product existed, but its structure didn’t match how students navigated or consumed content. Students are often stressed and in a hurry — the product needed to respect that mindset.
+      Nubo is a free online education initiative helping students prepare for Brazil’s ENEM entrance exam. Students balancing school, work, and exam preparation needed a clear way to join a live class or study later.
+    </p>
+    <p>
+      The existing experience made those tasks harder: live content was difficult to locate, redirects to external platforms were abrupt, and recorded lessons needed clearer organization. Students also needed guidance to complete the information required after admission.
+    </p>
+    <p>
+      Internal Growth/Data reporting described roughly 90% abandonment during 2024, with around 16 students still active at the end of the year. This was context for the broader engagement challenge; it did not establish interface friction as its only cause.
     </p>
   </section>
 
-    <!-- PERSONA -->
-    <section>
-      <h2>Persona</h2>
-      <div class="card card__single">
-        <img src="assets/cases/Persona/Persona Helena NUBO.png" alt="Persona Helena - Student preparing for ENEM">
-      </div>
-      <p>
-        To humanize our design process, we used <strong>Helena</strong> as our main persona. 
-        She is a senior high school student who works part-time and studies for the ENEM exam. 
-        Her days are packed, so she values speed, clarity, and simplicity in digital products.
-      </p>
-      <ul class="card__list">
-        <li><strong>Objectives:</strong> quickly find and join live classes, stay organized with minimal effort, keep motivation high.</li>
-        <li><strong>Pain Points:</strong> confusing navigation, lack of visibility on live content, abrupt redirections to external tools.</li>
-      </ul>
-      <p>
-        Helena’s needs guided the redesign of the Home and Profile screens, ensuring 
-        that the app felt less bureaucratic and more supportive of her study routine.
-      </p>
-    </section>
-  
-
-  <!-- PROBLEM -->
-  <section>
-    <h2>Problem</h2>
+  <!-- ROLE & DELIVERY -->
+  <section aria-labelledby="role-title">
+    <h2 id="role-title">My Role &amp; Delivery</h2>
     <p>
-      The Home and Profile screens made the critical task — joining a live class — unnecessarily difficult. Students had no clear visibility of what was live, no intuitive schedule, and were abruptly redirected to external tools. Leadership reported ~90% abandonment during the year, ending with only ~16 active students in 2024.
+      As the sole designer, I owned the UX/UI work, from mapping flows and exploring wireframes to designing the final interfaces. I worked with the CTO and two developers in weekly meetings, aligned requirements with Growth, and incorporated input from the education team when needed.
     </p>
+    <p>
+      The work progressed through smaller deliveries over three months. The release order was:
+    </p>
+    <ol class="case2-releases">
+      <li><a href="#release-home"><strong>Home and live classes:</strong> make the next class easy to find and join.</a></li>
+      <li><a href="#release-profile"><strong>Complete your profile:</strong> explain what remained to be completed and show progress.</a></li>
+      <li><a href="#release-recorded"><strong>Recorded lessons:</strong> organize access for students studying outside live class hours.</a></li>
+    </ol>
   </section>
 
-  <!-- STRATEGY & PROCESS -->
-  <section>
-    <h2>Problem Analysis & Strategy</h2>
+  <!-- PERSONA -->
+  <section aria-labelledby="persona-title">
+    <h2 id="persona-title">Designing for Helena</h2>
+    <div class="card card__single">
+      <img src="assets/cases/Persona/Persona Helena NUBO.png" alt="Helena, the student persona used to guide the Nubo redesign">
+    </div>
     <p>
-      With only one week, we focused on removing friction. I facilitated alignment between product, design, and engineering, making trade-offs to deliver a smaller scope with higher quality.
+      Helena, our student persona, balances her final year of high school with a part-time job and preparation for ENEM. Her limited study time helped focus the design on direct access, clear instructions, and flexible learning.
     </p>
-    <p>
-      We had to postpone the Agenda feature (deadlines, simulados, essays) despite having mid-fi wireframes. Instead, we prioritized: clear “Live now” entry, simpler navigation, and predictable external redirects.
-    </p>
+    <ul class="card__list">
+      <li><strong>Join quickly:</strong> identify a live class without searching through several screens.</li>
+      <li><strong>Understand the next step:</strong> see which profile requirements are still pending.</li>
+      <li><strong>Study on her schedule:</strong> find recorded lessons when she cannot attend live.</li>
+    </ul>
+  </section>
 
-    <div class="card">
-      <img src="assets/cases/case2/Home-screen.png" alt="Wireframe Home screen">
+  <!-- STRATEGY -->
+  <section aria-labelledby="strategy-title">
+    <h2 id="strategy-title">Priorities &amp; Trade-offs</h2>
+    <p>
+      I prioritized the paths students needed most: entering a live class, completing their profile, and finding a recording. For live classes, the design target was access in three taps or fewer, informed by desk research of comparable learning apps.
+    </p>
+    <p>
+      We explored an Agenda for classes, exam simulations, and essay deadlines, but postponed it. Integration with students’ phone calendars, frequent class cancellations, and limited development time and budget made it a larger commitment. A list of upcoming broadcasts on the Home screen addressed the immediate need with a smaller scope.
+    </p>
+    <figure class="card card__single case2-phone">
+      <img src="assets/cases/case2/Home-screen.png" alt="Home design prioritizing the current live class above upcoming broadcasts">
+      <figcaption>The Home hierarchy puts the live class first, with upcoming broadcasts below.</figcaption>
+    </figure>
+  </section>
+
+  <!-- FLOWS -->
+  <section aria-labelledby="flow-title">
+    <h2 id="flow-title">Mapping the Experience</h2>
+    <p>
+      I mapped the paths between Home, classes, and Profile to make navigation decisions visible during discussions with engineering. This helped connect the individual releases into one experience.
+    </p>
+    <div class="card card__single">
+      <img src="assets/Fluxogram/floxogram.png" alt="User flow connecting the Nubo Home, classes, and Profile areas">
     </div>
   </section>
-
-    <!-- USER FLOW -->
-    <section>
-      <h2>User Flow</h2>
-      <p>
-        Before moving to visual design, we mapped how students would navigate through the new experience — from the Home screen to joining a class and completing their profile. 
-        This visualization clarified priorities and ensured no critical step was missed.
-      </p>
-  
-      <div class="card card__single">
-        <img src="assets/Fluxogram/floxogram.png" alt="User flow showing redesigned app navigation from Home to Profile">
-      </div>
-  
-      <p>
-        The simplified flow highlights fewer entry points, faster paths to live content, and seamless transitions between academic and personal areas of the app.
-      </p>
-    </section>
-  
 
   <!-- WIREFRAMES -->
-  <section>
-    <h2>Explorations & Wireframes</h2>
+  <section aria-labelledby="wireframes-title">
+    <h2 id="wireframes-title">Explorations &amp; Wireframes</h2>
     <p>
-      Even within a one-week deadline, I created mid-fidelity wireframes to explore different layouts. Some explorations were implemented, others were postponed (like the Agenda). These explorations helped clarify priorities.
+      Mid-fidelity explorations helped us discuss content hierarchy and implementation scope before final UI design. These artifacts include ideas that were postponed, such as the Agenda, alongside the paths developed for the releases.
     </p>
-
     <div class="wireframes-case2">
       <figure class="card__single">
-        <img src="assets/cases/case2/mid-fidelity/class-flow.jpg" alt="Mid-fi wireframes for Classes flow">
-        <figcaption>
-          <strong>Classes flow (mid-fi):</strong> explored ways to present live and recorded classes, categories (e.g., Natureza, Biologia), and content detail.
-        </figcaption>
+        <img src="assets/cases/case2/mid-fidelity/class-flow.jpg" alt="Mid-fidelity exploration of class categories, lessons, and content details">
+        <figcaption><strong>Classes:</strong> exploring the path from a subject category to a lesson and its content.</figcaption>
       </figure>
-
       <figure class="card__single">
-        <img src="assets/cases/case2/mid-fidelity/Home screen+agenda.png" alt="Mid-fi wireframes for Home and Agenda explorations">
-        <figcaption>
-          <strong>Home + Agenda (mid-fi):</strong> explored integration of daily agenda, notifications, and calendar view. Postponed due to technical and strategic constraints, but key in shaping the final Home redesign.
-        </figcaption>
+        <img src="assets/cases/case2/mid-fidelity/Home screen+agenda.png" alt="Mid-fidelity Home and Agenda exploration, including the postponed calendar concept">
+        <figcaption><strong>Home and Agenda:</strong> exploring daily planning and calendar views. The broader Agenda feature was postponed.</figcaption>
       </figure>
     </div>
   </section>
 
-  <!-- SOLUTIONS -->
-  <section>
-    <h2>Design Solutions</h2>
-    <p>We focused on simplifying two critical screens:</p>
-
-    <h3>Home</h3>
+  <!-- RELEASE 1 -->
+  <section id="release-home" aria-labelledby="home-title">
+    <h2 id="home-title">01 — Home &amp; Live Classes</h2>
+    <p>
+      The first release made joining a live class the primary action on Home. The design brought the current class into view and made the transition to an external platform explicit.
+    </p>
     <ul class="card__list">
-      <li>Live-first layout — “Currently Happening” at the top.</li>
-      <li>Upcoming Broadcasts list for the day.</li>
-      <li>Redirect confirmation modal before leaving to Google Meet/YouTube.</li>
+      <li><strong>Live class first:</strong> a prominent card pairs class information with a clear “Join the class” action.</li>
+      <li><strong>Upcoming broadcasts:</strong> a list helps students see what is coming next that day.</li>
+      <li><strong>Predictable redirects:</strong> a confirmation explains when the student is about to leave Nubo for an external class platform.</li>
     </ul>
-    <div class="card">
-      <img src="assets/cases/case2/Home - Aula ao vivo.png" alt="Mockup Home redesign">
+    <figure class="card card__single case2-phone">
+      <img src="assets/cases/case2/Home - Aula ao vivo.png" alt="Redesigned Home with a live Biology class and upcoming broadcasts">
+      <figcaption>One primary action helps students focus on the class happening now.</figcaption>
+    </figure>
+    <figure class="card card__single case2-redirect">
+      <img src="assets/cases/case2/Pop-up-class.png" alt="Confirmation explaining the redirect to Google Meet, with Back and Continue actions">
+      <figcaption>The redirect confirmation explains the destination before the student leaves the app.</figcaption>
+    </figure>
+  </section>
+
+  <!-- RELEASE 2 -->
+  <section id="release-profile" aria-labelledby="profile-title">
+    <h2 id="profile-title">02 — Complete Your Profile</h2>
+    <p>
+      After admission, students still needed to provide additional information. The second release made those requirements visible from Profile, explained why they mattered, and organized the questions into manageable groups.
+    </p>
+    <div class="card case2-screen-grid">
+      <img src="assets/cases/Classess-profile/Complete-profile.png" alt="Profile overview with completion indicators and a Complete profile action">
+      <img src="assets/cases/Classess-profile/why-complete.png" alt="Explanation of the requirements for maintaining full access to Nubo activities">
+      <img src="assets/cases/Classess-profile/Question-to-complete.png" alt="Four question groups: Education, About You, Interaction, and Retention Policies">
+      <img src="assets/cases/Classess-profile/Questions-completed.png" alt="Completed question groups shown in green with checkmarks">
     </div>
-
-    <section>
-      <h2>Lessons Flow</h2>
-      <p>
-        The redesigned Lessons screens were crucial to helping students access live and recorded content faster. 
-        Previously, the experience was fragmented — categories, videos, and lives were scattered or hidden behind menus. 
-        The new structure brought clarity, hierarchy, and motivation through a clean, colorful interface.
-      </p>
-  
-      <div class="card">
-        <img src="assets/cases/Classess-profile/Class.png" alt="All the classes in the app">
-        <img src="assets/cases/Classess-profile/Science.png" alt="The science subject in the app">
-        <img src="assets/cases/Classess-profile/Content.png" alt="The content of the science subject in the app">
-        <img src="assets/cases/Classess-profile/Class-player.png" alt="The class player in the app">
-      </div>
-  
-      <ul class="card__list">
-        <li><strong>Six clear categories:</strong> Naturezas, Linguagens, Humanas, Exatas, Redação, and Nubo Module.</li>
-        <li><strong>Color-coded cards:</strong> each subject uses a vivid color to make navigation immediate and memorable.</li>
-        <li><strong>Progressive disclosure:</strong> students first see subject overview, then classes within, and finally details like video, notes, and duration.</li>
-        <li><strong>Motivational design:</strong> simplified navigation to reduce fatigue and support consistency in study habits.</li>
-      </ul>
-    </section>
-
-    <h3>Profile</h3>
     <ul class="card__list">
-      <li>Display of student name, RA, and enrollment status.</li>
-      <li>Clear Full-time vs Part-time distinction.</li>
-      <li>Simple photo upload flow (camera, gallery, or mascot avatar).</li>
+      <li><strong>Four question groups:</strong> Education, About You, Interaction, and Retention Policies organize the 20 post-admission questions.</li>
+      <li><strong>Visible progress:</strong> completion indicators show what is pending, while green states and checkmarks identify finished groups.</li>
+      <li><strong>Clear expectations:</strong> an explanation connects profile completion with the requirements for full access to Nubo activities.</li>
     </ul>
-    <div class="card">
-      <img src="assets/cases/case2/Profile-screen.png" alt="Mockup Profile redesign">
-      <img src="assets/cases/case2/profile-changing-photo.png" alt="Mockup Profile redesign changing photo">
-      <img src="assets/cases/case2/profile-new-photo.png" alt="Mockup Profile redesign with new photo">
+    <h3>Profile details and photo</h3>
+    <p>
+      The Profile designs also show the student’s name, registration number, and enrollment status. The photo-editing flow offers a camera, gallery, or mascot avatar option. These screens support personal identification alongside the separate question-completion flow.
+    </p>
+    <div class="card case2-screen-grid">
+      <img src="assets/cases/case2/Profile-screen.png" alt="Student profile displaying a mascot avatar, name, registration number, and enrollment status">
+      <img src="assets/cases/case2/profile-changing-photo.png" alt="Profile photo selection options">
+      <img src="assets/cases/case2/profile-new-photo.png" alt="Profile after updating the student photo">
     </div>
   </section>
 
-    <!-- COMPLETE YOUR PROFILE -->
-    <section>
-      <h2>Complete Your Profile Flow</h2>
-      <p>
-        During onboarding and early use, many students left their profiles incomplete — missing photos, RA, or study mode — which caused issues in class identification and attendance tracking.
-        This microflow was designed to be fast, friendly, and mobile-first, encouraging completion without friction.
-      </p>
-  
-      <div class="card">
-        <img src="assets/cases/Classess-profile/Complete-profile.png" alt="Screen prompting student to complete profile information">
-        <img src="assets/cases/Classess-profile/why-complete.png" alt="Pop up explaining why the student should complete their profile">
-        <img src="assets/cases/Classess-profile/Question-to-complete.png" alt="Screen showing the questions to complete the profile">
-        <img src="assets/cases/Classess-profile/Questions-completed.png" alt="Screen showing the completed questions">
-  
-      <ul class="card__list">
-        <li><strong>3-step structure:</strong> personal info → profile photo → confirmation.</li>
-        <li><strong>Clear microcopy:</strong> supportive language like “Almost there!” and “You’re all set!” reinforces motivation.</li>
-        <li><strong>Visual feedback:</strong> progress indicator and check animations give a sense of completion.</li>
-        <li><strong>Integration:</strong> all data syncs directly with the student dashboard, eliminating future inconsistencies.</li>
-      </ul>
-  
-      <p>
-        This improvement reduced support requests about profile data and increased completion rate by over <strong>60%</strong> within the first week after release.
-      </p>
-    </section>
-  
+  <!-- RELEASE 3 -->
+  <section id="release-recorded" aria-labelledby="recorded-title">
+    <h2 id="recorded-title">03 — Recorded Lessons</h2>
+    <p>
+      The third release focused on students who needed to study outside the live class schedule. I organized the journey from subject categories to lesson content and the player, giving each screen a clear next step.
+    </p>
+    <div class="card case2-screen-grid">
+      <img src="assets/cases/Classess-profile/Class.png" alt="Class overview with subject categories and a recorded-class option">
+      <img src="assets/cases/Classess-profile/Science.png" alt="Science category showing available subjects">
+      <img src="assets/cases/Classess-profile/Content.png" alt="Lesson content list within a subject">
+      <img src="assets/cases/Classess-profile/Class-player.png" alt="Recorded lesson player and supporting content">
+    </div>
+    <ul class="card__list">
+      <li><strong>Recognizable categories:</strong> subject names, illustrations, and color help distinguish areas of study.</li>
+      <li><strong>Progressive disclosure:</strong> students choose a category, explore its lessons, and then open the content.</li>
+      <li><strong>Flexible access:</strong> recordings provide a route back to learning when a student misses the live session.</li>
+    </ul>
+  </section>
 
   <!-- RESULTS -->
-  <section>
-    <h2>Results</h2>
+  <section aria-labelledby="results-title">
+    <h2 id="results-title">Outcomes &amp; Evidence</h2>
     <ul class="card__list">
-      <li>Zero confusion reports at launch.</li>
-      <li>Students praised clarity and usability (testimonials below).</li>
-      <li>Historic engagement decline reduced by ~45% after launch.</li>
+      <li><strong>60% profile completion:</strong> the reported share of students who completed their profiles. The measurement period was not documented in the information available for this case.</li>
+      <li><strong>Approximately 45% reduction in engagement decline:</strong> reported by Growth and the CTO for 2025 compared with 2024.</li>
+      <li><strong>No confusion reports received at launch:</strong> a qualitative signal from the feedback available to the team, rather than a measured task-success rate.</li>
+      <li><strong>Positive student feedback:</strong> messages praised the app’s organization and the ability to keep up outside the regular class schedule.</li>
     </ul>
-    <div class="card card__single">
-      <img src="assets/cases/case2/testimonials.png" alt="Student testimonials praising the new app">
+    <p class="case2-evidence-note">
+      The quantitative outcomes were shared through internal reporting and discussions with the CTO. The engagement comparison describes a broader product outcome; it does not isolate the effect of the redesign from other changes. Profile completion is reported as a completion rate, not an increase over a baseline.
+    </p>
+    <div class="card card__single case2-testimonials">
+      <img src="assets/cases/case2/testimonials.png" alt="Student feedback praising the app’s appearance, organization, and access outside regular class hours, with English translations">
     </div>
   </section>
 
-  <!-- LEARNINGS -->
-  <section>
-    <h2>Learnings</h2>
+  <!-- REFLECTION -->
+  <section aria-labelledby="learnings-title">
+    <h2 id="learnings-title">What I Learned</h2>
     <ul class="card__list">
-      <li>Balancing speed and quality under tight deadlines is key.</li>
-      <li>Trade-offs are necessary to deliver high-value features on time.</li>
-      <li>Clarity and simplicity always beat complexity.</li>
+      <li><strong>Sequence work around student tasks.</strong> Smaller releases let us address live access, profile requirements, and recorded learning as distinct problems within one product.</li>
+      <li><strong>Consider the ongoing cost of a feature.</strong> The Agenda decision involved calendar integration and schedule changes as well as the initial interface.</li>
+      <li><strong>Make requirements understandable.</strong> Grouping profile questions and showing completed states gives students a clearer path through institutional requirements.</li>
     </ul>
-  </section>
-
-  <!-- ROLE -->
-  <section>
-    <h2>My Role</h2>
+    <h3>What I would improve next</h3>
     <p>
-      I led UX/UI decision-making for this redesign. I collaborated with 2 other designers and engineering, making trade-offs to deliver a smaller scope with higher quality in one week. I produced mid-fi explorations, facilitated team alignment, and designed the final UI for Home and Profile, ensuring mobile-first usability and live-class accessibility.
-    </p>
-  </section>
-
-  <!-- CONCLUSION -->
-  <section>
-    <h2>Conclusion</h2>
-    <p>
-      This redesign wasn’t just UI polish — it was a focused effort to let students access what matters most: live classes, in less than 3 taps. By shipping a smaller but higher-quality scope, we built trust with students and leadership, and created a foundation for future improvements like the Agenda and teacher dashboards.
+      I would define measurement windows and event tracking before release, then test the main tasks with students: joining a live class, finishing a profile question group, and finding a recorded lesson. That would help distinguish navigation improvements from broader engagement changes and guide the next iteration with stronger evidence.
     </p>
   </section>
 
