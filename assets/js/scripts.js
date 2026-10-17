@@ -83,8 +83,7 @@ if (caseImages.length && typeof HTMLDialogElement !== 'undefined') {
   const resetZoom = () => { endDrag(); fullImage.style.width = ''; fullImage.style.height = ''; viewer.classList.remove('is-zoomed'); zoom.textContent = ui('Zoom in', 'Ampliar'); zoom.setAttribute('aria-pressed', 'false'); stage.scrollTo(0, 0); };
   viewer.querySelector('.viewer-close').addEventListener('click', () => viewer.close());
   viewer.addEventListener('click', e => { if (e.target === viewer || (e.target === stage && !viewer.classList.contains('is-zoomed'))) viewer.close(); });
-  zoom.addEventListener('click', () => {
-    if (viewer.classList.contains('is-zoomed')) { resetZoom(); return; }
+  const zoomAt = (point = { x: 0.5, y: 0.5 }) => {
     if (!fullImage.naturalWidth || !fullImage.naturalHeight) return;
     const fitScale = Math.min(stage.clientWidth / fullImage.naturalWidth, stage.clientHeight / fullImage.naturalHeight);
     viewer.classList.add('is-zoomed');
@@ -92,12 +91,32 @@ if (caseImages.length && typeof HTMLDialogElement !== 'undefined') {
     fullImage.style.height = `${Math.round(fullImage.naturalHeight * fitScale * 2.5)}px`;
     zoom.textContent = ui('Fit to screen', 'Ajustar à tela');
     zoom.setAttribute('aria-pressed', 'true');
-    // Scroll after the enlarged image is laid out so zoom begins at its center.
-    stage.scrollLeft = Math.max(0, (stage.scrollWidth - stage.clientWidth) / 2);
-    stage.scrollTop = Math.max(0, (stage.scrollHeight - stage.clientHeight) / 2);
+    // Center the selected detail; scroll limits keep image edges reachable.
+    stage.scrollLeft = Math.max(0, fullImage.offsetWidth * point.x - stage.clientWidth / 2);
+    stage.scrollTop = Math.max(0, fullImage.offsetHeight * point.y - stage.clientHeight / 2);
     stage.focus({ preventScroll: true });
+  };
+  const imagePoint = (img, event) => {
+    if (!event || event.detail === 0) return { x: 0.5, y: 0.5 };
+    const rect = img.getBoundingClientRect();
+    const scale = Math.min(rect.width / img.naturalWidth, rect.height / img.naturalHeight);
+    const width = img.naturalWidth * scale;
+    const height = img.naturalHeight * scale;
+    if (!width || !height) return { x: 0.5, y: 0.5 };
+    return {
+      x: Math.min(1, Math.max(0, (event.clientX - rect.left - (rect.width - width) / 2) / width)),
+      y: Math.min(1, Math.max(0, (event.clientY - rect.top - (rect.height - height) / 2) / height))
+    };
+  };
+  zoom.addEventListener('click', () => {
+    if (viewer.classList.contains('is-zoomed')) resetZoom();
+    else zoomAt();
+  });
+  fullImage.addEventListener('click', event => {
+    if (!viewer.classList.contains('is-zoomed')) zoomAt(imagePoint(fullImage, event));
   });
   viewer.addEventListener('close', () => {
+    fullImage.onload = null;
     document.body.style.overflow = previousOverflow;
     resetZoom();
     trigger?.focus({ preventScroll: true });
@@ -108,16 +127,20 @@ if (caseImages.length && typeof HTMLDialogElement !== 'undefined') {
     img.setAttribute('aria-haspopup', 'dialog');
     img.setAttribute('aria-label', ui(`Enlarge image: ${img.alt || 'Project image'}`, `Ampliar imagem: ${img.alt || 'Imagem do projeto'}`));
     img.title = ui('Click to enlarge', 'Clique para ampliar');
-    const open = () => {
+    const open = event => {
+      const point = imagePoint(img, event);
       trigger = img;
+      fullImage.onload = null;
       fullImage.src = img.currentSrc || img.src;
       fullImage.alt = img.alt;
-      viewer.querySelector('.viewer-caption').textContent = img.alt + ui(' — Zoom in, then drag to explore.', ' — Amplie e arraste para explorar.');
+      viewer.querySelector('.viewer-caption').textContent = img.alt + ui(' — Drag to explore. Use Fit to screen for the full image.', ' — Arraste para explorar. Use Ajustar à tela para ver a imagem inteira.');
       resetZoom();
       previousOverflow = document.body.style.overflow;
       document.body.style.overflow = 'hidden';
       viewer.showModal();
-      viewer.querySelector('.viewer-close').focus();
+      const showDetail = () => { if (viewer.open && trigger === img) zoomAt(point); };
+      if (fullImage.complete && fullImage.naturalWidth) showDetail();
+      else fullImage.onload = showDetail;
     };
     img.addEventListener('click', open);
     img.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
